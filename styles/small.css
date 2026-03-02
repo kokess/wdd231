@@ -1,0 +1,81 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+nav,
+main,
+footer {
+    padding: 0.5rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+}
+
+#hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    padding: 0.5rem;
+}
+
+section {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.photo-placeholder {
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-buttons button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-card {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #aaa;
+}
+
+.completed {
+    background-color: #d4edda;
+}

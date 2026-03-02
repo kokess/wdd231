@@ -1,0 +1,19 @@
+@media screen and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        gap: 1rem;
+    }
+
+    main section {
+        flex: 1;
+    }
+}
