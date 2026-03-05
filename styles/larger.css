@@ -1,28 +1,19 @@
-@media (min-width:768px) {
+@media screen and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
 
     #hamburger {
         display: none;
     }
 
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background: #444;
-    }
-
-    nav li {
-        margin: 0 1rem;
-    }
-
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         gap: 1rem;
     }
 
-    main section:last-child {
-        grid-column: span 2;
+    main section {
+        flex: 1;
     }
-
 }
