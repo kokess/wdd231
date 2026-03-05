@@ -1,20 +1,15 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-header,
-nav,
-main,
-footer {
-    padding: 0.5rem;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
+    background: #333;
+    color: white;
 }
 
 .logo {
@@ -22,60 +17,55 @@ header {
 }
 
 #hamburger {
-    display: block;
     font-size: 2rem;
     background: none;
     border: none;
+    color: white;
     cursor: pointer;
 }
 
 nav ul {
-    display: flex;
+    display: none;
     flex-direction: column;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    background: #444;
 }
 
-nav ul li {
-    margin-bottom: 0.5rem;
+nav ul.open {
+    display: flex;
 }
 
-nav ul li a {
+nav a {
+    color: white;
     text-decoration: none;
-    color: #000;
+    padding: 0.75rem;
+    display: block;
 }
 
 main {
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 section {
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 1rem;
     border: 1px solid #ccc;
-    background-color: #f0f0f0;
+    background: #f4f4f4;
 }
 
-.photo-placeholder {
-    height: 200px;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.course-buttons button {
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+.photo-placeholder img {
+    width: 100%;
+    height: auto;
 }
 
 .course-card {
     padding: 0.5rem;
-    margin-bottom: 0.5rem;
     border: 1px solid #aaa;
+    margin-bottom: 0.5rem;
 }
 
 .completed {
-    background-color: #d4edda;
+    background: #d4edda;
 }

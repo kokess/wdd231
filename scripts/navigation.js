@@ -1,6 +1,6 @@
 const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav ul");
+const navMenu = document.getElementById("navMenu");
 
 hamburger.addEventListener("click", () => {
-    nav.classList.toggle("open");
+    navMenu.classList.toggle("open");
 });

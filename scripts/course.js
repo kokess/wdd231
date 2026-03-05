@@ -8,19 +8,35 @@ const coursesContainer = document.getElementById("courses");
 const totalCredits = document.getElementById("totalCredits");
 
 function displayCourses(filter = "All") {
+
     let filtered = courses;
-    if (filter !== "All") filtered = courses.filter(c => c.type === filter);
+
+    if (filter !== "All") {
+        filtered = courses.filter(course => course.type === filter);
+    }
 
     coursesContainer.innerHTML = "";
-    filtered.forEach(c => {
+
+    filtered.forEach(course => {
+
         const div = document.createElement("div");
-        div.className = `course-card ${c.completed ? "completed" : ""}`;
-        div.textContent = `${c.name} (${c.credits} credits)`;
+
+        div.className = "course-card";
+
+        if (course.completed) {
+            div.classList.add("completed");
+        }
+
+        div.textContent = `${course.name} (${course.credits} credits)`;
+
         coursesContainer.appendChild(div);
+
     });
 
-    const sumCredits = filtered.reduce((sum, c) => sum + c.credits, 0);
-    totalCredits.textContent = `Total credits: ${sumCredits}`;
+    const total = filtered.reduce((sum, course) => sum + course.credits, 0);
+
+    totalCredits.textContent = `Total Credits: ${total}`;
+
 }
 
 document.getElementById("allBtn").addEventListener("click", () => displayCourses("All"));
