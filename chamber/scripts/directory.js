@@ -1,7 +1,5 @@
-// js/directory.js
-
-const url = "data/members.json";
 const cards = document.querySelector("#cards");
+const url = "data/members.json";
 
 // Async fetch function
 async function getMembers() {
@@ -40,6 +38,24 @@ const displayMembers = (members) => {
         cards.appendChild(card);
     });
 };
+
+// Grid/List Toggle
+const gridBtn = document.querySelector("#gridBtn");
+const listBtn = document.querySelector("#listBtn");
+
+gridBtn.addEventListener("click", () => {
+    cards.classList.add("grid");
+    cards.classList.remove("list");
+});
+
+listBtn.addEventListener("click", () => {
+    cards.classList.add("list");
+    cards.classList.remove("grid");
+});
+
+// Footer dynamic info
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
 
 // Call fetch
 getMembers();
