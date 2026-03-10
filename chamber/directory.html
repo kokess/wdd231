@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Business Directory | Chamber of Commerce</title>
+    <title>Chamber of Commerce Business Directory | Local Companies</title>
     <meta name="description"
-        content="Explore our chamber of commerce business directory featuring local companies, contact information, and member organizations in the community.">
+        content="Explore our chamber of commerce business directory featuring trusted local companies, membership levels, and contact information.">
     <meta name="author" content="Austine Dominic Essien">
 
     <!-- Favicon -->
@@ -18,50 +17,58 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- REQUIRED CSS FILES -->
-    <link rel="stylesheet" href="css/small.css"> <!-- Mobile-first CSS -->
-    <link rel="stylesheet" href="css/larger.css"> <!-- Desktop/Large Screen CSS -->
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
 
-    <!-- JavaScript -->
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Business Directory | Local Companies">
+    <meta property="og:description"
+        content="Explore our chamber of commerce business directory featuring trusted local companies, membership levels, and contact information.">
+    <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/chamber-social.jpg">
+    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+
+    <!-- JS File -->
     <script src="js/directory.js" defer></script>
 </head>
 
 <body>
-
     <header>
-        <h1>City Chamber of Commerce</h1>
-
+        <h1>Chamber of Commerce</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="membership.html">Membership</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-
-        <h2>Business Directory</h2>
-
+        <!-- Grid/List Toggle Buttons -->
         <div class="view-buttons">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
+            <button id="gridBtn">Grid View</button>
+            <button id="listBtn">List View</button>
         </div>
 
-        <div id="cards" class="grid"></div>
-
+        <!-- Member Cards Container -->
+        <div id="cards" class="grid">
+            <!-- Member cards will be dynamically injected by directory.js -->
+        </div>
     </main>
 
     <footer>
-
-        <p>Contact: info@chamber.org | +2348038391287</p>
-        <p>© <span id="year"></span> | Austine Dominic Essien | WDD 231</p>
-        <p>Last Modification: <span id="lastModified"></span></p>
-
+        <p>&copy; <span id="year"></span> Austine Dominic Essien | WDD 231</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 
+    <script>
+        // Display current year and last modification date in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
 </body>
 
 </html>
