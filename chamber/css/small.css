@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    background: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+#members.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#members.list {
+    display: block;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

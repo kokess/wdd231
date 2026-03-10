@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "name": "Tech Solutions",
+            "address": "123 Main St",
+            "phone": "555-1234",
+            "website": "https://techsolutions.com",
+            "image": "company1.jpg",
+            "membership": 3
+        },
+        {
+            "name": "City Bakery",
+            "address": "45 Market Rd",
+            "phone": "555-5678",
+            "website": "https://citybakery.com",
+            "image": "company2.jpg",
+            "membership": 2
+        },
+        {
+            "name": "Green Gardens",
+            "address": "78 Flower Ave",
+            "phone": "555-2222",
+            "website": "https://greengardens.com",
+            "image": "company3.jpg",
+            "membership": 1
+        },
+        {
+            "name": "Urban Fitness",
+            "address": "99 Fitness St",
+            "phone": "555-3333",
+            "website": "https://urbanfitness.com",
+            "image": "company4.jpg",
+            "membership": 2
+        },
+        {
+            "name": "QuickFix Auto",
+            "address": "12 Garage Rd",
+            "phone": "555-4444",
+            "website": "https://quickfixauto.com",
+            "image": "company5.jpg",
+            "membership": 1
+        },
+        {
+            "name": "Fresh Market",
+            "address": "88 Food St",
+            "phone": "555-5555",
+            "website": "https://freshmarket.com",
+            "image": "company6.jpg",
+            "membership": 3
+        },
+        {
+            "name": "Creative Designs",
+            "address": "54 Studio Blvd",
+            "phone": "555-6666",
+            "website": "https://creativedesigns.com",
+            "image": "company7.jpg",
+            "membership": 2
+        }
+    ]
+}
