@@ -2,66 +2,83 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce Business Directory | Local Companies</title>
-    <meta name="description"
-        content="Explore our chamber of commerce business directory featuring trusted local companies, membership levels, and contact information.">
+
+    <title>Chamber of Commerce | Business Directory</title>
+
+    <meta name="description" content="Directory of local businesses that are members of the Chamber of Commerce.">
     <meta name="author" content="Austine Dominic Essien">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Google Fonts -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chamber of Commerce Business Directory">
+    <meta property="og:description" content="Explore our local business directory.">
+    <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/chamber-social.jpg">
+    <meta property="og:url" content="https://kokess.github.io/wdd231/chamber/directory.html">
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/larger.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Chamber of Commerce Business Directory | Local Companies">
-    <meta property="og:description"
-        content="Explore our chamber of commerce business directory featuring trusted local companies, membership levels, and contact information.">
-    <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/chamber-social.jpg">
-    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
 
-    <!-- JS File -->
-    <script src="js/directory.js" defer></script>
 </head>
 
 <body>
+
     <header>
+
         <h1>Chamber of Commerce</h1>
+
         <nav>
             <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="membership.html">Membership</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
+
     </header>
 
+
     <main>
-        <!-- Grid/List Toggle Buttons -->
+
+        <h2>Business Directory</h2>
+
         <div class="view-buttons">
             <button id="gridBtn">Grid View</button>
             <button id="listBtn">List View</button>
         </div>
 
-        <!-- Member Cards Container -->
-        <div id="cards" class="grid">
-            <!-- Member cards will be dynamically injected by directory.js -->
-        </div>
+        <div id="cards" class="grid"></div>
+
     </main>
 
+
     <footer>
-        <p>&copy; <span id="year"></span> Austine Dominic Essien | WDD 231</p>
+
+        <p><strong>Timbuktu Chamber of Commerce</strong></p>
+        <p>10 Rue De La Paix, Timbuktu</p>
+        <p>Email: info@timbuktuchamber.org</p>
+        <p>Phone: (223) 555-2300</p>
+
+        <p>© <span id="year"></span> Austine Dominic Essien | WDD 231</p>
+
         <p>Last Modified: <span id="lastModified"></span></p>
+
     </footer>
 
 </body>

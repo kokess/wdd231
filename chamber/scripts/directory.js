@@ -1,61 +1,83 @@
-const cards = document.querySelector("#cards");
 const url = "data/members.json";
+const cards = document.querySelector("#cards");
 
-// Async fetch function
 async function getMembers() {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        displayMembers(data.members);
-    } catch (error) {
-        console.error("Error fetching member data:", error);
-    }
+
+    const response = await fetch(url);
+
+    const data = await response.json();
+
+    displayMembers(data.members);
+
 }
 
-// Display members in cards
-const displayMembers = (members) => {
+function displayMembers(members) {
+
+    cards.innerHTML = "";
+
     members.forEach(member => {
+
         const card = document.createElement("section");
 
-        const fullName = document.createElement("h2");
-        fullName.textContent = member.name;
+        const name = document.createElement("h3");
+        name.textContent = member.name;
 
-        const portrait = document.createElement("img");
-        portrait.setAttribute("src", `images/${member.image}`);
-        portrait.setAttribute("alt", `Logo of ${member.name}`);
-        portrait.setAttribute("loading", "lazy");
-        portrait.setAttribute("width", "340");
-        portrait.setAttribute("height", "440");
+        const logo = document.createElement("img");
+        logo.src = `images/${member.image}`;
+        logo.alt = `${member.name} logo`;
+        logo.loading = "lazy";
 
-        const info = document.createElement("p");
-        info.classList.add("member-info");
-        info.textContent = `${member.address} | ${member.phone} | ${member.website}`;
+        const address = document.createElement("p");
+        address.textContent = member.address;
 
-        card.appendChild(fullName);
-        card.appendChild(portrait);
-        card.appendChild(info);
+        const phone = document.createElement("p");
+        phone.textContent = member.phone;
+
+        const website = document.createElement("a");
+        website.href = member.website;
+        website.textContent = "Visit Website";
+        website.target = "_blank";
+
+        const membership = document.createElement("p");
+
+        if (member.membership === 3) membership.textContent = "Gold Member";
+        if (member.membership === 2) membership.textContent = "Silver Member";
+        if (member.membership === 1) membership.textContent = "Member";
+
+        card.appendChild(name);
+        card.appendChild(logo);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
+        card.appendChild(membership);
 
         cards.appendChild(card);
-    });
-};
 
-// Grid/List Toggle
+    });
+
+}
+
+getMembers();
+
+
 const gridBtn = document.querySelector("#gridBtn");
 const listBtn = document.querySelector("#listBtn");
 
 gridBtn.addEventListener("click", () => {
+
     cards.classList.add("grid");
     cards.classList.remove("list");
+
 });
 
 listBtn.addEventListener("click", () => {
+
     cards.classList.add("list");
     cards.classList.remove("grid");
+
 });
 
-// Footer dynamic info
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
 
-// Call fetch
-getMembers();
+document.querySelector("#year").textContent = new Date().getFullYear();
+
+document.querySelector("#lastModified").textContent = document.lastModified;

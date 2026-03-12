@@ -1,113 +1,96 @@
-/* ===============================
-   Base Styles
-   =============================== */
-
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: Roboto, sans-serif;
     margin: 0;
-    padding: 0;
+    background: #f4f4f4;
     color: #333;
-    background-color: #f9f9f9;
 }
 
-header,
-footer {
-    background-color: #004080;
+header {
+    background: #004080;
     color: white;
-    text-align: center;
     padding: 1rem;
-}
-
-h1 {
-    margin: 0;
-    font-size: 1.8rem;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    /* FLEXBOX used here */
-    flex-direction: column;
-    gap: 0.5rem;
     margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 nav a {
-    text-decoration: none;
     color: white;
-    font-weight: 500;
+    text-decoration: none;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* ===============================
-   Main Content
-   =============================== */
-
 main {
     padding: 1rem;
 }
 
-#cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-/* Card Styles */
-#cards section {
-    background-color: white;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#cards img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-/* Member Details */
-.member-info {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* ===============================
-   Grid/List Toggle Buttons
-   =============================== */
 .view-buttons {
     display: flex;
-    /* FLEXBOX for buttons */
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.view-buttons button {
-    padding: 0.5rem 1rem;
+button {
+    padding: .5rem 1rem;
     border: none;
-    border-radius: 4px;
-    background-color: #004080;
+    background: #004080;
     color: white;
     cursor: pointer;
 }
 
-.view-buttons button:hover {
-    background-color: #0066cc;
+button:hover {
+    background: #0066cc;
 }
 
-/* ===============================
-   Footer
-   =============================== */
-footer p {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
+#cards.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#cards.list {
+    display: block;
+}
+
+#cards section {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#cards img {
+    width: 100%;
+    height: auto;
+}
+
+#cards.list section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+#cards.list img {
+    display: none;
+}
+
+footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: .9rem;
 }
