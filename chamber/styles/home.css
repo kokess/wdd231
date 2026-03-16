@@ -1,0 +1,300 @@
+/* =============================
+   HOME PAGE STYLES (home.css)
+   ============================= */
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+    background: linear-gradient(135deg, #004080 0%, #0066cc 60%, #0099ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../images/hero.jpg') center/cover no-repeat;
+    opacity: 0.25;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #003060;
+    padding: 0.75rem 1.75rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}
+
+/* --- Info Grid --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* --- Section Base Styles --- */
+.events-section,
+.weather-section,
+.forecast-section {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.events-section h2,
+.weather-section h2,
+.forecast-section h2,
+.spotlights-section h2 {
+    background: #004080;
+    color: white;
+    margin: -1rem -1rem 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px 8px 0 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Event Cards --- */
+.event-card {
+    border-left: 4px solid #004080;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.75rem;
+    background: #f0f6ff;
+    border-radius: 0 4px 4px 0;
+}
+
+.event-card:last-child {
+    margin-bottom: 0;
+}
+
+.event-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 0.95rem;
+    color: #004080;
+}
+
+.event-card p {
+    margin: 0.15rem 0;
+    font-size: 0.85rem;
+}
+
+/* --- Weather --- */
+.weather-current {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.weather-icon-temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+#current-temp {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #004080;
+}
+
+.weather-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* --- Forecast --- */
+.forecast-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.forecast-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.forecast-list li:last-child {
+    border-bottom: none;
+}
+
+.forecast-list .forecast-day {
+    font-weight: 700;
+    color: #004080;
+}
+
+.forecast-list .forecast-temp {
+    font-weight: 700;
+}
+
+/* --- Spotlights --- */
+.spotlights-section {
+    padding: 1rem;
+}
+
+.spotlights-section h2 {
+    background: #004080;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.spotlight-card img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #004080;
+}
+
+.spotlight-card p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #555;
+}
+
+.spotlight-card a {
+    color: #0066cc;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+.spotlight-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.badge-gold {
+    background: #ffcc00;
+    color: #5a3e00;
+}
+
+.badge-silver {
+    background: #c0c0c0;
+    color: #333;
+}
+
+/* --- Footer (home additions) --- */
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* ============================
+   LARGER SCREEN OVERRIDES
+   ============================ */
+@media (min-width: 600px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (min-width: 900px) {
+    .hero {
+        min-height: 360px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2rem;
+    }
+
+    .spotlights-section {
+        padding: 1rem 2rem 2rem;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+}
