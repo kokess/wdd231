@@ -6,7 +6,10 @@ body {
 
 header,
 nav,
-main,
+main {
+    padding: 0.5rem;
+}
+
 footer {
     padding: 0.5rem;
 }
@@ -43,7 +46,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: #000000;
 }
 
 main {
@@ -53,13 +56,13 @@ main {
 section {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     background-color: #f0f0f0;
 }
 
 .photo-placeholder {
     height: 200px;
-    background-color: #ddd;
+    background-color: #dddddd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +76,7 @@ section {
 .course-card {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-    border: 1px solid #aaa;
+    border: 1px solid #aaaaaa;
 }
 
 .completed {
