@@ -93,4 +93,7 @@ footer {
     text-align: center;
     padding: 1rem;
     font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
