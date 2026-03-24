@@ -1,115 +1,169 @@
-<main>
-    <h2>Join the Chamber</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="join-container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- FORM -->
-        <form method="get" action="thankyou.html">
+    <title>Join Lagos Chamber of Commerce</title>
 
-            <label>
-                First Name
-                <input type="text" name="fname" required title="Enter your first name" autocomplete="given-name">
-            </label>
+    <meta name="description"
+        content="Apply to join the Lagos Chamber of Commerce and grow your business through networking, events, and promotion opportunities.">
+    <meta name="author" content="Austine Dominic Essien">
 
-            <label>
-                Last Name
-                <input type="text" name="lname" required title="Enter your last name" autocomplete="family-name">
-            </label>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
 
-            <label>
-                Organization Title
-                <input type="text" name="orgtitle" title="At least 7 characters, letters, hyphens, spaces only"
-                    autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
-            </label>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Join Lagos Chamber of Commerce">
+    <meta property="og:description"
+        content="Become a member of the Lagos Chamber and enjoy business growth, networking, and exclusive benefits.">
+    <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/chamber-social.jpg">
+    <meta property="og:url" content="https://kokess.github.io/wdd231/chamber/join.html">
 
-            <label>
-                Email
-                <input type="email" name="email" required placeholder="example@email.com" title="Enter a valid email"
-                    autocomplete="email">
-            </label>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-            <label>
-                Mobile Phone
-                <input type="tel" name="phone" required title="Enter your mobile number" autocomplete="tel">
-            </label>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
-            <label>
-                Business Name
-                <input type="text" name="business" required title="Enter your business name"
-                    autocomplete="organization">
-            </label>
+    <!-- JS -->
+    <script src="scripts/join.js" defer></script>
+</head>
 
-            <label>
-                Membership Level
-                <select name="membership" required>
-                    <option value="">Select Membership</option>
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                </select>
-            </label>
+<body>
 
-            <label>
-                Business Description
-                <textarea name="description" title="Describe your business"></textarea>
-            </label>
+    <!-- HEADER -->
+    <header>
+        <h1>Timbuktu Chamber of Commerce</h1>
 
-            <!-- Hidden Timestamp -->
-            <input type="hidden" id="timestamp" name="timestamp">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <input type="submit" value="Apply Now">
+    <!-- MAIN -->
+    <main>
+        <h1>Join the Chamber</h1>
 
-        </form>
+        <div class="join-container">
 
-        <!-- MEMBERSHIP CARDS -->
-        <div class="membership-cards">
+            <!-- FORM -->
+            <form method="get" action="thankyou.html">
 
-            <div class="card">
-                <h3>NP Membership</h3>
-                <a href="#" data-modal="npModal">View Benefits</a>
-            </div>
+                <label>First Name
+                    <input type="text" name="fname" required autocomplete="given-name" title="Enter first name">
+                </label>
 
-            <div class="card">
-                <h3>Bronze</h3>
-                <a href="#" data-modal="bronzeModal">View Benefits</a>
-            </div>
+                <label>Last Name
+                    <input type="text" name="lname" required autocomplete="family-name" title="Enter last name">
+                </label>
 
-            <div class="card">
-                <h3>Silver</h3>
-                <a href="#" data-modal="silverModal">View Benefits</a>
-            </div>
+                <label>Organization Title
+                    <input type="text" name="orgtitle" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title"
+                        title="Minimum 7 letters, spaces or hyphens">
+                </label>
 
-            <div class="card">
-                <h3>Gold</h3>
-                <a href="#" data-modal="goldModal">View Benefits</a>
+                <label>Email
+                    <input type="email" name="email" required autocomplete="email" placeholder="example@email.com"
+                        title="Enter a valid email">
+                </label>
+
+                <label>Mobile Phone
+                    <input type="tel" name="phone" required autocomplete="tel" title="Enter phone number">
+                </label>
+
+                <label>Business Name
+                    <input type="text" name="business" required autocomplete="organization" title="Enter business name">
+                </label>
+
+                <label>Membership Level
+                    <select name="membership" required>
+                        <option value="">Select Membership</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+
+                <label>Business Description
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+
+                <!-- Hidden timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Apply Now">
+            </form>
+
+            <!-- MEMBERSHIP CARDS -->
+            <div class="membership-cards">
+
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <button data-modal="npModal">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Bronze</h3>
+                    <button data-modal="bronzeModal">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Silver</h3>
+                    <button data-modal="silverModal">View Benefits</button>
+                </div>
+
+                <div class="card">
+                    <h3>Gold</h3>
+                    <button data-modal="goldModal">View Benefits</button>
+                </div>
+
             </div>
 
         </div>
+    </main>
 
-    </div>
-</main>
+    <!-- FOOTER -->
+    <footer>
+        <p>© <span id="year"></span> Austine Dominic Essien</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
 
-<dialog id="npModal">
-    <h3>NP Membership</h3>
-    <p>No fee. For nonprofits.</p>
-    <button onclick="this.parentElement.close()">Close</button>
-</dialog>
+    <!-- MODALS -->
+    <dialog id="npModal">
+        <h3>NP Membership</h3>
+        <p>No fee for nonprofit organizations.</p>
+        <button class="close-btn">Close</button>
+    </dialog>
 
-<dialog id="bronzeModal">
-    <h3>Bronze</h3>
-    <p>Basic listing and events.</p>
-    <button onclick="this.parentElement.close()">Close</button>
-</dialog>
+    <dialog id="bronzeModal">
+        <h3>Bronze</h3>
+        <p>Basic listing and networking events.</p>
+        <button class="close-btn">Close</button>
+    </dialog>
 
-<dialog id="silverModal">
-    <h3>Silver</h3>
-    <p>Includes training and discounts.</p>
-    <button onclick="this.parentElement.close()">Close</button>
-</dialog>
+    <dialog id="silverModal">
+        <h3>Silver</h3>
+        <p>Includes training and discounts.</p>
+        <button class="close-btn">Close</button>
+    </dialog>
 
-<dialog id="goldModal">
-    <h3>Gold</h3>
-    <p>Premium advertising and spotlight.</p>
-    <button onclick="this.parentElement.close()">Close</button>
-</dialog>
+    <dialog id="goldModal">
+        <h3>Gold</h3>
+        <p>Premium advertising and spotlight features.</p>
+        <button class="close-btn">Close</button>
+    </dialog>
+
+</body>
+
+</html>

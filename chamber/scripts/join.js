@@ -1,11 +1,20 @@
 // Timestamp
 document.querySelector("#timestamp").value = new Date().toISOString();
 
-// Modal handling
-document.querySelectorAll("[data-modal]").forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const modal = document.getElementById(link.dataset.modal);
-        modal.showModal();
+// Footer
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
+
+// Open modals
+document.querySelectorAll("[data-modal]").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.getElementById(btn.dataset.modal).showModal();
+    });
+});
+
+// Close modals
+document.querySelectorAll(".close-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.closest("dialog").close();
     });
 });
