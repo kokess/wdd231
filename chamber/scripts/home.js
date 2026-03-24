@@ -1,69 +1,56 @@
-// MENU
-const menuBtn = document.querySelector("#menuBtn");
-const nav = document.querySelector("nav ul");
+// ✅ WEATHER CONFIG (FIXED: Lagos + metric)
+const API_KEY = "YOUR_API_KEY_HERE";
+const CITY = "Lagos";
+const COUNTRY = "NG";
+const UNITS = "metric";
 
-menuBtn.addEventListener("click", () => {
+// CURRENT WEATHER
+async function getWeather() {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
+
+    const res = await fetch(url);
+    const data = await res.json();
+
+    document.getElementById("current-temp").textContent = `${Math.round(data.main.temp)}°C`;
+    document.getElementById("weather-desc").textContent = data.weather[0].description;
+    document.getElementById("temp-high").textContent = Math.round(data.main.temp_max);
+    document.getElementById("temp-low").textContent = Math.round(data.main.temp_min);
+    document.getElementById("humidity").textContent = data.main.humidity;
+
+    document.getElementById("weather-icon").src =
+        `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+}
+
+// FORECAST (3 days)
+async function getForecast() {
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const list = document.getElementById("forecast-list");
+    list.innerHTML = "";
+
+    const days = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
+
+    days.forEach(day => {
+        const li = document.createElement("li");
+        li.textContent = `${new Date(day.dt_txt).toLocaleDateString()} - ${Math.round(day.main.temp)}°C`;
+        list.appendChild(li);
+    });
+}
+
+// ✅ HAMBURGER MENU
+const btn = document.getElementById("menu-btn");
+const nav = document.getElementById("nav-menu");
+
+btn.addEventListener("click", () => {
     nav.classList.toggle("open");
 });
 
 // FOOTER
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = document.lastModified;
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
 
-
-// WEATHER
-const apiKey = "YOUR_API_KEY"; // <-- PUT YOUR KEY HERE
-const url = `https://api.openweathermap.org/data/2.5/forecast?q=Lagos,NG&units=metric&appid=${apiKey}`;
-
-async function getWeather() {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    document.querySelector("#temp").textContent =
-        Math.round(data.list[0].main.temp) + "°C";
-
-    document.querySelector("#desc").textContent =
-        data.list[0].weather[0].description;
-
-    const icon = data.list[0].weather[0].icon;
-    document.querySelector("#weather-icon").src =
-        `https://openweathermap.org/img/wn/${icon}@2x.png`;
-
-    const forecast = document.querySelector("#forecast");
-
-    for (let i = 8; i <= 24; i += 8) {
-        const li = document.createElement("li");
-        li.textContent = Math.round(data.list[i].main.temp) + "°C";
-        forecast.appendChild(li);
-    }
-}
-
+// INIT
 getWeather();
-
-
-// SPOTLIGHTS
-async function getSpotlights() {
-    const res = await fetch("data/members.json");
-    const data = await res.json();
-
-    let members = data.members.filter(m => m.membership >= 2);
-
-    members = members.sort(() => 0.5 - Math.random()).slice(0, 3);
-
-    const container = document.querySelector("#spotlights");
-
-    members.forEach(m => {
-        const div = document.createElement("div");
-
-        div.innerHTML = `
-<h3>${m.name}</h3>
-<img src="images/${m.image}" alt="${m.name}">
-<p>${m.phone}</p>
-<a href="${m.website}" target="_blank">Visit</a>
-`;
-
-        container.appendChild(div);
-    });
-}
-
-getSpotlights();
+getForecast();

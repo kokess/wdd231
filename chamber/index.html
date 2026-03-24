@@ -7,17 +7,29 @@
 
     <title>Lagos Chamber of Commerce | Home</title>
 
-    <meta name="description" content="Welcome to the Lagos Chamber of Commerce.">
+    <!-- ✅ FIXED META DESCRIPTION (within 50–160 chars) -->
+    <meta name="description"
+        content="Discover Lagos Chamber of Commerce events, local businesses, weather updates, and opportunities to grow and connect with the community.">
+
     <meta name="author" content="Austine Dominic Essien">
 
-    <link rel="icon" href="images/favicon.ico">
+    <!-- ✅ OPEN GRAPH FIXED -->
+    <meta property="og:title" content="Lagos Chamber of Commerce – Business & Community Hub">
+    <meta property="og:description"
+        content="Explore Lagos Chamber events, business directory, and real-time weather updates. Connect and grow with the Lagos business community.">
+    <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/chamber-social.jpg">
+    <meta property="og:url" content="https://kokess.github.io/wdd231/chamber/index.html">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
 
     <script src="scripts/home.js" defer></script>
 </head>
@@ -27,11 +39,12 @@
     <header>
         <h1>Lagos Chamber of Commerce</h1>
 
-        <button id="menuBtn">☰</button>
+        <!-- ✅ HAMBURGER BUTTON -->
+        <button id="menu-btn">☰</button>
 
-        <nav aria-label="Main Navigation">
+        <nav id="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
@@ -42,44 +55,65 @@
     <main>
 
         <section class="hero">
-            <img src="images/hero-image.jpg" alt="Hero image representing local business community" class="hero-img">
+            <img src="images/hero-image.jpg" alt="Hero Image representing business and community" class="hero-img">
 
             <div class="hero-content">
                 <h2>Welcome to Lagos Chamber of Commerce</h2>
                 <p>Where Business Meets Community</p>
-                <a href="join.html" class="cta">Join the Chamber</a>
+                <a href="join.html" class="cta-button">Join the Chamber Today</a>
             </div>
         </section>
 
-        <div class="grid">
+        <div class="info-grid">
 
-            <section>
-                <h2>Events</h2>
-                <p>Business Gala – April 5</p>
-                <p>Workshop – April 18</p>
-                <p>Market Day – May 2</p>
+            <!-- EVENTS -->
+            <section class="events-section">
+                <h2>Current Events</h2>
+                <article class="event-card">
+                    <h3>Annual Business Gala</h3>
+                    <p><strong>Date:</strong> April 5, 2026</p>
+                </article>
             </section>
 
-            <section>
-                <h2>Weather</h2>
-                <img id="weather-icon" src="" alt="">
-                <p id="temp"></p>
-                <p id="desc"></p>
-                <ul id="forecast"></ul>
+            <!-- WEATHER -->
+            <section class="weather-section">
+                <h2>Current Weather</h2>
+                <div class="weather-current">
+                    <img id="weather-icon" alt="Weather icon">
+                    <span id="current-temp"></span>
+                </div>
+                <ul class="weather-details">
+                    <li id="weather-desc"></li>
+                    <li>High: <span id="temp-high"></span></li>
+                    <li>Low: <span id="temp-low"></span></li>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                </ul>
             </section>
 
-            <section>
-                <h2>Spotlights</h2>
-                <div id="spotlights"></div>
+            <!-- FORECAST -->
+            <section class="forecast-section">
+                <h2>Forecast</h2>
+                <ul id="forecast-list"></ul>
             </section>
 
         </div>
 
+        <section class="spotlights-section">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-cards" class="spotlight-grid"></div>
+        </section>
+
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Austine Dominic Essien</p>
-        <p id="lastModified"></p>
+        <div>
+            <p><strong>Lagos Chamber of Commerce</strong></p>
+            <p>Victoria Island, Lagos</p>
+        </div>
+        <div>
+            <p>© <span id="year"></span></p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 
 </body>
