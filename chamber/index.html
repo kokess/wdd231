@@ -6,32 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Lagos Chamber of Commerce | Home</title>
-    <meta name="description"
-        content="Welcome to the Lagos Chamber of Commerce – your hub for local business, events, and community growth.">
+
+    <meta name="description" content="Welcome to the Lagos Chamber of Commerce.">
     <meta name="author" content="Austine Dominic Essien">
 
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Lagos Chamber of Commerce">
-    <meta property="og:description"
-        content="Your hub for local business, community events, weather, and connecting with Lagos's thriving business community.">
-    <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/chamber-social.jpg">
-    <meta property="og:url" content="https://kokess.github.io/wdd231/chamber/index.html">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
-    <!-- JavaScript -->
     <script src="scripts/home.js" defer></script>
 </head>
 
@@ -39,9 +26,12 @@
 
     <header>
         <h1>Lagos Chamber of Commerce</h1>
-        <nav>
+
+        <button id="menuBtn">☰</button>
+
+        <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
@@ -51,92 +41,45 @@
 
     <main>
 
-        <!-- Hero Section -->
-        <section class="hero" aria-label="Hero banner">
-        
-            <img src="images/hero-image.jpg" alt="Hero image of Lagos city representing local business community" class="hero-img">
-        
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Hero image representing local business community" class="hero-img">
+
             <div class="hero-content">
                 <h2>Welcome to Lagos Chamber of Commerce</h2>
                 <p>Where Business Meets Community</p>
-                <a href="join.html" class="cta-button">Join the Chamber Today</a>
+                <a href="join.html" class="cta">Join the Chamber</a>
             </div>
-        
         </section>
 
-        <!-- Info Grid: Events, Weather, Forecast -->
-        <div class="info-grid">
+        <div class="grid">
 
-            <!-- Current Events -->
-            <section class="events-section" aria-label="Current Events">
-                <h2>Current Events</h2>
-                <article class="event-card">
-                    <h3>Annual Business Gala</h3>
-                    <p><strong>Date:</strong> April 5, 2025</p>
-                    <p>Join us for an evening of networking, awards, and celebration with Lagos's finest businesses.
-                    </p>
-                </article>
-                <article class="event-card">
-                    <h3>Small Business Workshop</h3>
-                    <p><strong>Date:</strong> April 18, 2025</p>
-                    <p>A free workshop covering marketing, finance basics, and digital tools for small business owners.
-                    </p>
-                </article>
-                <article class="event-card">
-                    <h3>Community Market Day</h3>
-                    <p><strong>Date:</strong> May 2, 2025</p>
-                    <p>Showcase your products and services at our monthly outdoor market in the town square.</p>
-                </article>
+            <section>
+                <h2>Events</h2>
+                <p>Business Gala – April 5</p>
+                <p>Workshop – April 18</p>
+                <p>Market Day – May 2</p>
             </section>
 
-            <!-- Current Weather -->
-            <section class="weather-section" aria-label="Current Weather">
-                <h2>Current Weather</h2>
-                <div class="weather-current">
-                    <div class="weather-icon-temp">
-                        <img id="weather-icon" src="images/weather-icon1.jpg" alt="Weather icon representing current conditions" width="64" height="64">
-                        <span id="current-temp">--°F</span>
-                    </div>
-                    <ul class="weather-details">
-                        <li id="weather-desc">Loading...</li>
-                        <li>High: <span id="temp-high">--</span>°F</li>
-                        <li>Low: <span id="temp-low">--</span>°F</li>
-                        <li>Humidity: <span id="humidity">--</span>%</li>
-                        <li>Sunrise: <span id="sunrise">--</span></li>
-                        <li>Sunset: <span id="sunset">--</span></li>
-                    </ul>
-                </div>
+            <section>
+                <h2>Weather</h2>
+                <img id="weather-icon" src="" alt="">
+                <p id="temp"></p>
+                <p id="desc"></p>
+                <ul id="forecast"></ul>
             </section>
 
-            <!-- Weather Forecast -->
-            <section class="forecast-section" aria-label="Weather Forecast">
-                <h2>Weather Forecast</h2>
-                <ul id="forecast-list" class="forecast-list">
-                    <li>Loading forecast...</li>
-                </ul>
+            <section>
+                <h2>Spotlights</h2>
+                <div id="spotlights"></div>
             </section>
 
         </div>
-
-        <!-- Business Spotlights -->
-        <section class="spotlights-section" aria-label="Business Spotlights">
-            <h2>Business Spotlights</h2>
-            <div id="spotlight-cards" class="spotlight-grid"></div>
-        </section>
 
     </main>
 
     <footer>
-        <div class="footer-left">
-            <p><strong>Lagos Chamber of Commerce</strong></p>
-            <p>Commerce House, Victoria Island, Lagos</p>
-            <p>Email: info@lagoschamber.org</p>
-            <p>Phone: (+234) 8184237047</p>
-        </div>
-        <div class="footer-right">
-            <p>© <span id="year"></span> Austine Dominic Essien | WDD 231</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
-        </div>
+        <p>© <span id="year"></span> Austine Dominic Essien</p>
+        <p id="lastModified"></p>
     </footer>
 
 </body>
