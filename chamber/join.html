@@ -1,0 +1,115 @@
+<main>
+    <h2>Join the Chamber</h2>
+
+    <div class="join-container">
+
+        <!-- FORM -->
+        <form method="get" action="thankyou.html">
+
+            <label>
+                First Name
+                <input type="text" name="fname" required title="Enter your first name" autocomplete="given-name">
+            </label>
+
+            <label>
+                Last Name
+                <input type="text" name="lname" required title="Enter your last name" autocomplete="family-name">
+            </label>
+
+            <label>
+                Organization Title
+                <input type="text" name="orgtitle" title="At least 7 characters, letters, hyphens, spaces only"
+                    autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+            </label>
+
+            <label>
+                Email
+                <input type="email" name="email" required placeholder="example@email.com" title="Enter a valid email"
+                    autocomplete="email">
+            </label>
+
+            <label>
+                Mobile Phone
+                <input type="tel" name="phone" required title="Enter your mobile number" autocomplete="tel">
+            </label>
+
+            <label>
+                Business Name
+                <input type="text" name="business" required title="Enter your business name"
+                    autocomplete="organization">
+            </label>
+
+            <label>
+                Membership Level
+                <select name="membership" required>
+                    <option value="">Select Membership</option>
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+            </label>
+
+            <label>
+                Business Description
+                <textarea name="description" title="Describe your business"></textarea>
+            </label>
+
+            <!-- Hidden Timestamp -->
+            <input type="hidden" id="timestamp" name="timestamp">
+
+            <input type="submit" value="Apply Now">
+
+        </form>
+
+        <!-- MEMBERSHIP CARDS -->
+        <div class="membership-cards">
+
+            <div class="card">
+                <h3>NP Membership</h3>
+                <a href="#" data-modal="npModal">View Benefits</a>
+            </div>
+
+            <div class="card">
+                <h3>Bronze</h3>
+                <a href="#" data-modal="bronzeModal">View Benefits</a>
+            </div>
+
+            <div class="card">
+                <h3>Silver</h3>
+                <a href="#" data-modal="silverModal">View Benefits</a>
+            </div>
+
+            <div class="card">
+                <h3>Gold</h3>
+                <a href="#" data-modal="goldModal">View Benefits</a>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<dialog id="npModal">
+    <h3>NP Membership</h3>
+    <p>No fee. For nonprofits.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+</dialog>
+
+<dialog id="bronzeModal">
+    <h3>Bronze</h3>
+    <p>Basic listing and events.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+</dialog>
+
+<dialog id="silverModal">
+    <h3>Silver</h3>
+    <p>Includes training and discounts.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+</dialog>
+
+<dialog id="goldModal">
+    <h3>Gold</h3>
+    <p>Premium advertising and spotlight.</p>
+    <button onclick="this.parentElement.close()">Close</button>
+</dialog>
