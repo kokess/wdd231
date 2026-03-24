@@ -183,6 +183,13 @@ async function loadSpotlights() {
     }
 }
 
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("nav ul");
+
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+});
+
 // -----------------------------------------------
 // FOOTER
 // -----------------------------------------------
