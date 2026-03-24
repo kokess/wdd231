@@ -16,19 +16,20 @@
     padding: 2rem 1rem;
 }
 
+
 .hero-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.25;
+    z-index: -1;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-    color: white;
+    color: #ffffff;
 }
 
 .hero-content h2 {
