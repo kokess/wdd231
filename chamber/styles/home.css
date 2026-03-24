@@ -282,11 +282,11 @@
         padding: 1rem 2rem 2rem;
     }
 
-        footer {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
     .footer-right {
         text-align: right;
