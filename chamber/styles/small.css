@@ -38,6 +38,25 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* HAMBURGER MENU */
+#menuBtn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hide menu by default (mobile) */
+#navMenu {
+    display: none;
+}
+
+/* Show when active */
+#navMenu.open {
+    display: flex;
+}
+
 /* =========================
    MAIN
    ========================= */
