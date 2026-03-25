@@ -7,7 +7,6 @@
     position: relative;
     width: 100%;
     min-height: 260px;
-    background: linear-gradient(135deg, #004080 0%, #0066cc 60%, #0099ff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,16 +15,24 @@
     padding: 2rem 1rem;
 }
 
-
+/* Hero background image */
 .hero-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
 }
 
+/* Dark overlay for accessibility */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 64, 128, 0.6);
+}
+
+/* Hero content */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -35,15 +42,16 @@
 .hero-content h2 {
     font-size: 2rem;
     margin: 0 0 0.5rem;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* CTA Button */
 .cta-button {
     display: inline-block;
     background: #ffcc00;
@@ -73,7 +81,7 @@
 .events-section,
 .weather-section,
 .forecast-section {
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -84,7 +92,7 @@
 .forecast-section h2,
 .spotlights-section h2 {
     background: #004080;
-    color: white;
+    color: #ffffff;
     margin: -1rem -1rem 1rem;
     padding: 0.6rem 1rem;
     border-radius: 8px 8px 0 0;
@@ -165,12 +173,12 @@
     border-bottom: none;
 }
 
-.forecast-list .forecast-day {
+.forecast-day {
     font-weight: 700;
     color: #004080;
 }
 
-.forecast-list .forecast-temp {
+.forecast-temp {
     font-weight: 700;
 }
 
@@ -181,7 +189,7 @@
 
 .spotlights-section h2 {
     background: #004080;
-    color: white;
+    color: #ffffff;
     padding: 0.6rem 1rem;
     border-radius: 4px;
     font-size: 1rem;
@@ -197,15 +205,11 @@
 }
 
 .spotlight-card {
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
 }
 
 .spotlight-card img {
@@ -224,7 +228,7 @@
 .spotlight-card p {
     font-size: 0.85rem;
     margin: 0;
-    color: #555;
+    color: #555555;
 }
 
 .spotlight-card a {
@@ -253,12 +257,13 @@
 
 .badge-silver {
     background: #c0c0c0;
-    color: #333;
+    color: #333333;
 }
 
 /* ============================
-   LARGER SCREEN OVERRIDES
+   RESPONSIVE DESIGN
    ============================ */
+
 @media (min-width: 600px) {
     .spotlight-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -281,15 +286,5 @@
 
     .spotlights-section {
         padding: 1rem 2rem 2rem;
-    }
-
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .footer-right {
-        text-align: right;
     }
 }
