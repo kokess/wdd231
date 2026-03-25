@@ -133,6 +133,8 @@ async function loadSpotlights() {
 // -----------------------------
 // FOOTER
 // -----------------------------
+document.querySelector("#weather-desc").textContent =
+    data.weather[0].description;
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 

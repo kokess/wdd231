@@ -52,6 +52,27 @@ nav a:hover {
     display: none;
 }
 
+/* Hide nav by default (mobile) */
+#navMenu {
+    display: none;
+    flex-direction: column;
+}
+
+/* Show when toggled */
+#navMenu.open {
+    display: flex;
+}
+
+/* Hamburger button */
+#menuBtn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
 /* Show when active */
 #navMenu.open {
     display: flex;
