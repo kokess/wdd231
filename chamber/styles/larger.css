@@ -1,3 +1,7 @@
+/* =========================
+   MEDIUM SCREENS (600px+)
+   ========================= */
+
 @media (min-width: 600px) {
 
     nav ul {
@@ -10,6 +14,10 @@
     }
 }
 
+/* =========================
+   LARGE SCREENS (900px+)
+   ========================= */
+
 @media (min-width: 900px) {
 
     header {
@@ -21,18 +29,15 @@
         padding: 2rem;
     }
 
-    /* ONLY override the value */
     #cards.grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
 
-@media (min-width: 600px) {
-    #menuBtn {
-        display: none;
+    .join-container {
+        grid-template-columns: 2fr 1fr;
     }
 
-    nav ul {
-        display: flex;
+    .membership-cards {
+        align-content: start;
     }
 }

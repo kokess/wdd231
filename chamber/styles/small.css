@@ -1,9 +1,17 @@
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
     background: #f4f4f4;
     color: #333;
 }
+
+/* =========================
+   HEADER & NAV
+   ========================= */
 
 header {
     background: #004080;
@@ -18,7 +26,7 @@ nav ul {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 nav a {
@@ -30,20 +38,17 @@ nav a:hover {
     text-decoration: underline;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav ul {
-    width: 100%;
-    text-align: center;
-}
+/* =========================
+   MAIN
+   ========================= */
 
 main {
     padding: 1rem;
 }
+
+/* =========================
+   BUTTONS
+   ========================= */
 
 .view-buttons {
     display: flex;
@@ -53,7 +58,7 @@ main {
 }
 
 button {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border: none;
     background: #004080;
     color: white;
@@ -64,21 +69,9 @@ button:hover {
     background: #0066cc;
 }
 
-#menuBtn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-nav ul {
-    display: none;
-}
-
-nav ul.open {
-    display: flex;
-}
+/* =========================
+   DIRECTORY CARDS
+   ========================= */
 
 #cards.grid {
     display: grid;
@@ -114,13 +107,54 @@ nav ul.open {
     display: none;
 }
 
+/* =========================
+   JOIN PAGE
+   ========================= */
+
+.join-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Animation */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
     background: #004080;
     color: white;
     text-align: center;
     padding: 1rem;
-    font-size: .9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    font-size: 0.9rem;
 }
