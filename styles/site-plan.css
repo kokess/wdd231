@@ -1,0 +1,52 @@
+/* =========================
+   SITE PLAN STYLES
+   ========================= */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #004080;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    background: #ffffff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #004080;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+pre {
+    background: #eee;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
