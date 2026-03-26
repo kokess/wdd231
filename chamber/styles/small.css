@@ -160,3 +160,29 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+#discoverGrid {
+    display: grid;
+    gap: 1rem;
+
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
