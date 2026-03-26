@@ -113,6 +113,10 @@ button:hover {
    JOIN PAGE
    ========================= */
 
+/* =========================
+   JOIN PAGE + CARDS
+   ========================= */
+
 .join-container {
     display: grid;
     gap: 1rem;
@@ -123,13 +127,19 @@ button:hover {
     gap: 1rem;
 }
 
-/* Animation */
+/* SINGLE card rule (FIXED) */
 .card {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+
+    /* animation */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.8s ease forwards;
 }
 
+/* Stagger animation */
 .card:nth-child(2) {
     animation-delay: 0.2s;
 }

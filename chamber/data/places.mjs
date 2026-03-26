@@ -3,48 +3,48 @@ export const places = [
         name: "Lekki Conservation Centre",
         address: "Lekki, Lagos",
         description: "A nature reserve with Africa's longest canopy walkway.",
-        image: "lekki.jpg"
+        image: "lekki.webp"
     },
     {
         name: "Nike Art Gallery",
         address: "Lekki, Lagos",
         description: "One of the largest art galleries in West Africa.",
-        image: "nike.jpg"
+        image: "nike.webp"
     },
     {
         name: "Tarkwa Bay",
         address: "Lagos Island",
         description: "A beautiful beach accessible by boat.",
-        image: "tarkwa.jpg"
+        image: "tarkwa.webp"
     },
     {
         name: "National Museum Lagos",
         address: "Onikan, Lagos",
         description: "Historical artifacts and cultural heritage.",
-        image: "museum.jpg"
+        image: "museum.webp"
     },
     {
         name: "Freedom Park",
         address: "Lagos Island",
         description: "A cultural and relaxation hub.",
-        image: "freedom.jpg"
+        image: "freedom.webp"
     },
     {
         name: "Lekki Arts Market",
         address: "Lekki, Lagos",
         description: "Local crafts and souvenirs.",
-        image: "market.jpg"
+        image: "market.webp"
     },
     {
         name: "Elegushi Beach",
         address: "Lekki, Lagos",
         description: "Popular beach for relaxation and events.",
-        image: "elegushi.jpg"
+        image: "elegushi.webp"
     },
     {
         name: "Jhalobia Park",
         address: "Murtala Muhammed Airport",
         description: "A peaceful botanical garden.",
-        image: "jhalobia.jpg"
+        image: "jhalobia.webp"
     }
 ];
