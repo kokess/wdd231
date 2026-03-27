@@ -53,35 +53,38 @@
 
         <div class="join-container">
 
-            <!-- FORM -->
             <form method="get" action="thankyou.html">
-
+            
                 <label>First Name
-                    <input type="text" name="fname" required autocomplete="given-name">
+                    <input type="text" name="fname" required autocomplete="given-name" title="Enter your first name">
                 </label>
-
+            
                 <label>Last Name
-                    <input type="text" name="lname" required autocomplete="family-name">
+                    <input type="text" name="lname" required autocomplete="family-name" title="Enter your last name">
                 </label>
-
+            
                 <label>Organization Title
-                    <input type="text" name="orgtitle" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title">
+                    <input type="text" name="orgtitle" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title"
+                        title="Enter your position in the organization (minimum 7 characters, letters, spaces, or hyphens only)">
                 </label>
-
-                <label>Email
-                    <input type="email" name="email" required placeholder="example@email.com">
+            
+                <label>Email Address
+                    <input type="email" name="email" required autocomplete="email" placeholder="example@email.com"
+                        title="Enter a valid email address">
                 </label>
-
+            
                 <label>Mobile Phone
-                    <input type="tel" name="phone" required autocomplete="tel">
+                    <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
                 </label>
-
-                <label>Business Name
-                    <input type="text" name="business" required autocomplete="organization">
+            
+                <label>Organization Name
+                    <input type="text" name="business" required autocomplete="organization"
+                        title="Enter your business or organization name">
                 </label>
-
+            
                 <label>Membership Level
-                    <select name="membership" required>
+                    <select name="membership" required title="Select your membership level">
+            
                         <option value="">Select Membership</option>
                         <option value="np">NP Membership</option>
                         <option value="bronze">Bronze</option>
@@ -89,13 +92,14 @@
                         <option value="gold">Gold</option>
                     </select>
                 </label>
-
-                <label>Business Description
-                    <textarea name="description"></textarea>
+            
+                <label>Organization Description
+                    <textarea name="description" title="Provide a brief description of your organization"></textarea>
                 </label>
-
+            
+                <!-- Hidden timestamp -->
                 <input type="hidden" id="timestamp" name="timestamp">
-
+            
                 <input type="submit" value="Apply Now">
             </form>
 
