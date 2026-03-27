@@ -1,6 +1,3 @@
-/* =========================
-   MEDIUM SCREENS (600px+)
-   ========================= */
 @media (min-width: 600px) {
 
     nav ul {
@@ -8,35 +5,11 @@
         justify-content: center;
     }
 
-    #menuBtn {
-        display: none;
-    }
-
-    /* Directory grid */
     #cards.grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
-/* =========================
-   DISCOVER PAGE (641px+)
-   ========================= */
-@media (min-width: 641px) {
-
-    #discoverGrid {
-        grid-template-areas:
-            "card1 card2"
-            "card3 card4"
-            "card5 card6"
-            "card7 card8";
-    }
-}
-
-
-/* =========================
-   LARGE SCREENS (900px+)
-   ========================= */
 @media (min-width: 900px) {
 
     header {
@@ -48,34 +21,18 @@
         padding: 2rem;
     }
 
-    /* Directory grid */
+    /* ONLY override the value */
     #cards.grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-
-/* =========================
-   EXTRA LARGE (1025px+)
-   ========================= */
-@media (min-width: 1025px) {
-
-    #discoverGrid {
-        grid-template-areas:
-            "card1 card2 card3"
-            "card4 card5 card6"
-            "card7 card8 card8";
+@media (min-width: 600px) {
+    #menuBtn {
+        display: none;
     }
 
-    /* Hover ONLY for discover images */
-    #discoverGrid img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.1);
-        transition: 0.3s;
-    }
-
-    /* Optional card hover */
-    .card:hover {
-        transform: scale(1.02);
+    nav ul {
+        display: flex;
     }
 }
