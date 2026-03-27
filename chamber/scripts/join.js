@@ -1,5 +1,5 @@
 // Timestamp
-document.querySelector("#timestamp").value = new Date().toISOString();
+document.querySelector("#timestamp").value = Date.now();
 
 // Footer
 document.querySelector("#year").textContent = new Date().getFullYear();

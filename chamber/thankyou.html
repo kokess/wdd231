@@ -1,7 +1,44 @@
-<main>
-    <h2>Thank You!</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-    <p>We appreciate your application.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div id="results"></div>
-</main>
+    <title>Thank You - Lagos Chamber</title>
+
+    <link rel="stylesheet" href="styles/small.css">
+    <script defer>
+        const params = new URLSearchParams(window.location.search);
+
+        window.onload = () => {
+            document.getElementById("output").innerHTML = `
+        <p><strong>Name:</strong> ${params.get("fname")} ${params.get("lname")}</p>
+        <p><strong>Email:</strong> ${params.get("email")}</p>
+        <p><strong>Phone:</strong> ${params.get("phone")}</p>
+        <p><strong>Business:</strong> ${params.get("business")}</p>
+        <p><strong>Membership:</strong> ${params.get("membership")}</p>
+        <p><strong>Submitted:</strong> ${new Date(Number(params.get("timestamp"))).toLocaleString()}</p>
+    `;
+        };
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+    <main>
+        <h2>Your Application Has Been Received</h2>
+        <div id="output"></div>
+    </main>
+
+    <footer>
+        <p>© Austine Dominic Essien</p>
+    </footer>
+
+</body>
+
+</html>
