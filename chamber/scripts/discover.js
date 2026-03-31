@@ -47,3 +47,6 @@ localStorage.setItem("lastVisit", now);
 
 // FOOTER
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+
+
