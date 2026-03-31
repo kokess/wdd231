@@ -1,10 +1,6 @@
-// ============================================================
-// HOME.JS – Navigation + Weather + Spotlights
-// ============================================================
-
-// -----------------------------
-// HAMBURGER MENU
-// -----------------------------
+// ============================
+// HAMBURGER MENU (FIXED)
+// ============================
 const menuBtn = document.querySelector("#menuBtn");
 const navMenu = document.querySelector("#navMenu");
 
@@ -12,17 +8,17 @@ menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("open");
 });
 
-// -----------------------------
-// WEATHER CONFIG
-// -----------------------------
-const API_KEY = "YOUR_API_KEY_HERE"; // 🔥 PUT YOUR REAL KEY HERE
+// ============================
+// WEATHER CONFIG (ADD REAL KEY)
+// ============================
+const API_KEY = "fcb6509e8f84b78cdd6927b417d46cad";
 const CITY = "Lagos";
 const COUNTRY = "NG";
-const UNITS = "metric"; // Celsius
+const UNITS = "metric";
 
-// -----------------------------
+// ============================
 // CURRENT WEATHER
-// -----------------------------
+// ============================
 async function getCurrentWeather() {
     try {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
@@ -38,21 +34,23 @@ async function getCurrentWeather() {
         document.querySelector("#temp-low").textContent =
             Math.round(data.main.temp_min);
 
-        const desc = data.weather[0].description;
+        // ✅ FIX: description added
+        document.querySelector("#weather-desc").textContent =
+            data.weather[0].description;
+
         const icon = data.weather[0].icon;
 
-        const iconEl = document.querySelector("#weather-icon");
-        iconEl.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-        iconEl.alt = desc;
+        document.querySelector("#weather-icon").src =
+            `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
     } catch (error) {
         console.error("Weather error:", error);
     }
 }
 
-// -----------------------------
+// ============================
 // 3-DAY FORECAST
-// -----------------------------
+// ============================
 async function getForecast() {
     try {
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=${UNITS}&appid=${API_KEY}`;
@@ -89,17 +87,19 @@ async function getForecast() {
     }
 }
 
-// -----------------------------
-// SPOTLIGHTS
-// -----------------------------
+// ============================
+// SPOTLIGHTS (KEEP GOLD & SILVER)
+// ============================
 async function loadSpotlights() {
     try {
         const response = await fetch("data/members.json");
         const data = await response.json();
 
-        const eligible = data.members.filter(m => m.membership === 2 || m.membership === 3);
+        // ✅ REQUIRED BY RUBRIC
+        const eligible = data.members.filter(
+            m => m.membership === 2 || m.membership === 3
+        );
 
-        // Shuffle
         eligible.sort(() => Math.random() - 0.5);
 
         const selected = eligible.slice(0, 3);
@@ -117,8 +117,14 @@ async function loadSpotlights() {
                 <p>${member.phone}</p>
                 <p>${member.address}</p>
                 <a href="${member.website}" target="_blank">${member.website}</a>
-                <span class="spotlight-badge ${member.membership === 3 ? "badge-gold" : "badge-silver"}">
-                    ${member.membership === 3 ? "⭐ Gold Member" : "Silver Member"}
+                <span class="spotlight-badge ${member.membership === 3
+                    ? "badge-gold"
+                    : "badge-silver"
+                }">
+                    ${member.membership === 3
+                    ? "⭐ Gold Member"
+                    : "🥈 Silver Member"
+                }
                 </span>
             `;
 
@@ -130,15 +136,15 @@ async function loadSpotlights() {
     }
 }
 
-// -----------------------------
+// ============================
 // FOOTER
-// -----------------------------
+// ============================
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 
-// -----------------------------
+// ============================
 // INIT
-// -----------------------------
+// ============================
 getCurrentWeather();
 getForecast();
 loadSpotlights();
