@@ -12,44 +12,40 @@
 
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Discover Lagos Chamber">
-    <meta property="og:description"
-        content="Explore top attractions in Lagos, discover local culture, and find opportunities for business growth and tourism in the city.">
-    <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/chamber-social.jpg">
-    <meta property="og:url" content="https://kokess.github.io/wdd231/chamber/discover.html">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/discover.css">
 
-    <script type="module" src="scripts/discover.js"></script>
+    <!-- JS -->
+    <script type="module" src="scripts/discover.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <p class="site-name">Lagos Chamber of Commerce</p>
-    
-        <nav>
+        <h1>Lagos Chamber of Commerce</h1>
+
+        <!-- ✅ Hamburger -->
+        <button id="menuBtn">☰</button>
+
+        <nav id="navMenu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Discover Lagos</h1>
 
-        <!-- VISIT MESSAGE -->
+    <main>
+        <h2>Discover Lagos</h2>
+
+        <!-- Visit message -->
         <div id="visitMessage"></div>
 
-        <!-- GRID -->
+        <!-- Grid -->
         <div id="discoverGrid"></div>
     </main>
 

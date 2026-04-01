@@ -1,12 +1,27 @@
 import { places } from "../data/places.mjs";
 
+// ============================
+// HAMBURGER MENU
+// ============================
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("#navMenu");
+
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+});
+
+// ============================
+// CREATE CARDS
+// ============================
 const container = document.querySelector("#discoverGrid");
 
 places.forEach((place, index) => {
     const card = document.createElement("section");
 
     card.classList.add("card");
-    card.style.gridArea = "card" + (index + 1);
+
+    // ✅ REQUIRED: named grid areas
+    card.style.gridArea = `card${index + 1}`;
 
     card.innerHTML = `
         <h2>${place.name}</h2>
@@ -21,8 +36,9 @@ places.forEach((place, index) => {
     container.appendChild(card);
 });
 
-
+// ============================
 // LOCAL STORAGE MESSAGE
+// ============================
 const message = document.querySelector("#visitMessage");
 
 const lastVisit = localStorage.getItem("lastVisit");
@@ -44,9 +60,7 @@ if (!lastVisit) {
 
 localStorage.setItem("lastVisit", now);
 
-
+// ============================
 // FOOTER
+// ============================
 document.querySelector("#year").textContent = new Date().getFullYear();
-
-
-

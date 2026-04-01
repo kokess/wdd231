@@ -43,7 +43,7 @@ export const places = [
     },
     {
         name: "Jhalobia Park",
-        address: "Murtala Muhammed Airport",
+        address: "Airport Road, Lagos",
         description: "A peaceful botanical garden.",
         image: "jhalobia-park.webp"
     }
