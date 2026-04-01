@@ -1,5 +1,5 @@
 /* =========================
-   DISCOVER GRID (SINGLE RULE)
+   DISCOVER GRID
    ========================= */
 
 #discoverGrid {
@@ -7,7 +7,6 @@
     gap: 1rem;
     padding: 1rem;
 
-    /* ✅ mobile layout */
     grid-template-areas:
         "card1"
         "card2"
@@ -44,10 +43,10 @@
 }
 
 /* =========================
-   CARD (SINGLE RULE ONLY)
+   DISCOVER CARD (RENAMED ✅)
    ========================= */
 
-.card {
+.discover-card {
     background: #ffffff;
     padding: 1rem;
     border-radius: 8px;
@@ -55,8 +54,7 @@
     text-align: center;
 }
 
-/* Image styling + hover */
-.card img {
+.discover-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
@@ -65,17 +63,17 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.card img:hover {
+.discover-card img:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
 }
 
-.card h2 {
+.discover-card h2 {
     font-size: 1rem;
     margin: 0.5rem 0;
 }
 
-.card p {
+.discover-card p {
     font-size: 0.85rem;
 }
 
