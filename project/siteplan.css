@@ -1,0 +1,64 @@
+/* ROOT COLORS */
+:root {
+    --primary-color: #2E8B57;
+    --secondary-color: #F4A261;
+    --background-color: #ffffff;
+    --text-color: #333;
+}
+
+/* GLOBAL STYLES */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 1rem;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 6px solid var(--secondary-color);
+}
+
+/* HEADINGS */
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+}
+
+/* LISTS */
+ul {
+    padding-left: 20px;
+}
+
+/* WIREFRAME BOX */
+.wireframe {
+    background-color: #fff;
+    border: 2px dashed var(--secondary-color);
+    padding: 1rem;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
