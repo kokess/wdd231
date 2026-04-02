@@ -181,3 +181,58 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+
+/* Visitor Message Styling */
+.visitor-banner {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
+
+/* Base Card Styling */
+.discover-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.discover-card h2 {
+    margin-top: 0.5rem;
+}
+
+.discover-card address {
+    font-style: normal;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.discover-card button {
+    margin-top: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Grid Setup - Named Areas */
+.discover-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}

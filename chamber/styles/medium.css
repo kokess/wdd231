@@ -1,0 +1,25 @@
+/* Medium: 2 Columns (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    /* Hover Effect for tablets/desktops only */
+    .card img:hover {
+        transform: scale(1.05);
+        filter: grayscale(50%);
+    }
+}
+
+/* Mobile: 1 Column (320px - 640px) */
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-areas:
+            "card1" "card2" "card3" "card4"
+            "card5" "card6" "card7" "card8";
+    }
+}

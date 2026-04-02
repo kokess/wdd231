@@ -1,66 +1,52 @@
-import { places } from "../data/places.mjs";
+import { places } from '../data/discover.mjs';
 
-// ============================
-// HAMBURGER MENU
-// ============================
-const menuBtn = document.querySelector("#menuBtn");
-const navMenu = document.querySelector("#navMenu");
-
-menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
+document.addEventListener("DOMContentLoaded", () => {
+    displayVisitorMessage();
+    buildCards();
 });
 
-// ============================
-// CREATE CARDS
-// ============================
-const container = document.querySelector("#discoverGrid");
+function displayVisitorMessage() {
+    const messageDisplay = document.getElementById("visitor-message");
+    const lastVisit = localStorage.getItem("lastVisitDate");
+    const now = Date.now();
 
-places.forEach((place, index) => {
-    const card = document.createElement("section");
+    // Save current visit for next time
+    localStorage.setItem("lastVisitDate", now);
 
-    card.classList.add("card");
+    if (!lastVisit) {
+        messageDisplay.textContent = "Welcome! Let us know if you have any questions.";
+        return;
+    }
 
-    // ✅ REQUIRED: named grid areas
-    card.style.gridArea = `card${index + 1}`;
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const timeDifference = now - parseInt(lastVisit);
+    const daysDifference = Math.floor(timeDifference / msPerDay);
 
-    card.innerHTML = `
-        <h2>${place.name}</h2>
-        <figure>
-            <img src="images/${place.image}" alt="${place.name}" loading="lazy">
-        </figure>
-        <address>${place.address}</address>
-        <p>${place.description}</p>
-        <button>Learn More</button>
-    `;
-
-    container.appendChild(card);
-});
-
-// ============================
-// LOCAL STORAGE MESSAGE
-// ============================
-const message = document.querySelector("#visitMessage");
-
-const lastVisit = localStorage.getItem("lastVisit");
-const now = Date.now();
-
-if (!lastVisit) {
-    message.textContent = "Welcome! Let us know if you have any questions.";
-} else {
-    const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-
-    if (days < 1) {
-        message.textContent = "Back so soon! Awesome!";
-    } else if (days === 1) {
-        message.textContent = "You last visited 1 day ago.";
+    if (timeDifference < msPerDay) {
+        messageDisplay.textContent = "Back so soon! Awesome!";
     } else {
-        message.textContent = `You last visited ${days} days ago.`;
+        const dayText = daysDifference === 1 ? "day" : "days";
+        messageDisplay.textContent = `You last visited ${daysDifference} ${dayText} ago.`;
     }
 }
 
-localStorage.setItem("lastVisit", now);
+function buildCards() {
+    const container = document.querySelector(".discover-grid");
 
-// ============================
-// FOOTER
-// ============================
-document.querySelector("#year").textContent = new Date().getFullYear();
+    places.forEach(item => {
+        const card = document.createElement("section");
+        card.className = "discover-card";
+
+        card.innerHTML = `
+            <h2>${item.name}</h2>
+            <figure>
+                <img src="${item.image}" alt="${item.name}" loading="lazy" width="300" height="200">
+            </figure>
+            <address>${item.address}</address>
+            <p>${item.description}</p>
+            <button>Learn More</button>
+        `;
+
+        container.appendChild(card);
+    });
+}
