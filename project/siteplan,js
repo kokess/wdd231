@@ -1,0 +1,2 @@
+// Basic JS file (required for validation)
+console.log("Site Plan Loaded");

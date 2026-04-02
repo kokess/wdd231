@@ -1,10 +1,12 @@
 /* ROOT COLORS */
 :root {
-    --primary-color: #2E8B57;
+    --primary-color: #1f6f4a;
+    /* darker green for better contrast */
     --secondary-color: #F4A261;
     --background-color: #ffffff;
-    --text-color: #333;
+    --text-color: #222;
 }
+
 
 /* GLOBAL STYLES */
 body {
@@ -18,8 +20,18 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
-    text-align: center;
+}
+
+/* HEADINGS */
+h1 {
+    color: white;
+    /* FIX: avoid same color as background */
+}
+
+h2,
+h3 {
+    color: #1f6f4a;
+    /* darker for contrast */
 }
 
 /* MAIN CONTENT */
