@@ -1,14 +1,10 @@
-/* ROOT COLORS */
 :root {
     --primary-color: #1f6f4a;
-    /* darker green for better contrast */
     --secondary-color: #F4A261;
     --background-color: #ffffff;
     --text-color: #222;
 }
 
-
-/* GLOBAL STYLES */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -23,23 +19,22 @@ header {
     text-align: center;
 }
 
-/* HEADINGS */
-header h1 {
-    color: white;
-   
-}
-
-h2,
-h3 {
-    color: #1f6f4a;
-    /* darker for contrast */
-}
-
-/* MAIN CONTENT */
+/* MAIN */
 main {
     padding: 1rem;
     max-width: 980px;
     margin: 0 auto;
+}
+
+/* HEADINGS */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h2,
+h3 {
+    color: var(--primary-color);
 }
 
 /* SECTIONS */
@@ -50,30 +45,16 @@ section {
     border-left: 6px solid var(--secondary-color);
 }
 
-/* HEADINGS */
-h1,
-h2,
-h3 {
-    color: var(--primary-color);
-}
-
-/* LISTS */
+/* LIST */
 ul {
     padding-left: 20px;
 }
 
-/* WIREFRAME BOX */
-.wireframe {
-    background-color: #fff;
-    border: 2px dashed var(--secondary-color);
-    padding: 1rem;
-    margin-top: 10px;
-}
-
-.wireframe img {
+/* IMAGE */
+.wireframes img {
     display: block;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 /* FOOTER */
