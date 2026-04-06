@@ -1,48 +1,66 @@
-// js/discover.js
-import { places } from '../data/discover.mjs';
+import { places } from "../data/places.mjs";
 
-function buildCards() {
-    const container = document.querySelector(".discover-grid");
+// ============================
+// HAMBURGER MENU
+// ============================
+const menuBtn = document.querySelector("#menuBtn");
+const navMenu = document.querySelector("#navMenu");
 
-    if (!container) return; // Exit if the grid isn't found
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+});
 
-    // Clear the container first
-    container.innerHTML = "";
+// ============================
+// CREATE CARDS
+// ============================
+const container = document.querySelector("#discoverGrid");
 
-    places.forEach(place => {
-        const card = document.createElement("section");
-        card.className = "discover-card";
+places.forEach((place, index) => {
+    const card = document.createElement("section");
 
-        // Using the data from your .mjs file
-        card.innerHTML = `
-            <h2>${place.name}</h2>
-            <figure>
-                <img src="${place.image}" alt="${place.name}" width="300" height="200">
-            </figure>
-            <address>${place.address}</address>
-            <p>${place.description}</p>
-            <button>Learn More</button>
-        `;
-        container.appendChild(card);
-    });
-}
+    card.classList.add("card");
 
-// Call the function immediately since it's a module
-buildCards();
+    // ✅ REQUIRED: named grid areas
+    card.style.gridArea = `card${index + 1}`;
 
-// --- Visitor Message Logic ---
-const visitorMessage = document.getElementById("visitor-message");
+    card.innerHTML = `
+        <h2>${place.name}</h2>
+        <figure>
+            <img src="images/${place.image}" alt="${place.name}" loading="lazy">
+        </figure>
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button>Learn More</button>
+    `;
+
+    container.appendChild(card);
+});
+
+// ============================
+// LOCAL STORAGE MESSAGE
+// ============================
+const message = document.querySelector("#visitMessage");
+
 const lastVisit = localStorage.getItem("lastVisit");
 const now = Date.now();
 
 if (!lastVisit) {
-    visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+    message.textContent = "Welcome! Let us know if you have any questions.";
 } else {
-    const daysSince = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-    if (daysSince < 1) {
-        visitorMessage.textContent = "Back so soon! Awesome!";
+    const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+
+    if (days < 1) {
+        message.textContent = "Back so soon! Awesome!";
+    } else if (days === 1) {
+        message.textContent = "You last visited 1 day ago.";
     } else {
-        visitorMessage.textContent = `You last visited ${daysSince} ${daysSince === 1 ? 'day' : 'days'} ago.`;
+        message.textContent = `You last visited ${days} days ago.`;
     }
 }
+
 localStorage.setItem("lastVisit", now);
+
+// ============================
+// FOOTER
+// ============================
+document.querySelector("#year").textContent = new Date().getFullYear();

@@ -2,6 +2,15 @@
    GLOBAL STYLES
    ========================= */
 
+   :root {
+       --light-grey: #f0f0f0;
+       --input-border: #ccc;
+       --background-color: #fff;
+       --text-color: #333;
+       --primary-color: #0077cc;
+       --white: #fff;
+   }
+
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
@@ -17,14 +26,11 @@ header {
     background: #004080;
     color: white;
     padding: 1rem;
-
-    /* ✅ FIX: align logo + hamburger */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* ✅ Hamburger button */
 #menuBtn {
     background: none;
     border: none;
@@ -33,12 +39,10 @@ header {
     cursor: pointer;
 }
 
-/* ✅ Hide menu by default (mobile) */
 #navMenu {
     display: none;
 }
 
-/* ✅ Show when clicked */
 #navMenu.open {
     display: block;
 }
@@ -70,29 +74,6 @@ main {
 }
 
 /* =========================
-   BUTTONS
-   ========================= */
-
-.view-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #004080;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0066cc;
-}
-
-/* =========================
    DIRECTORY CARDS
    ========================= */
 
@@ -100,10 +81,6 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-}
-
-#cards.list {
-    display: block;
 }
 
 #cards section {
@@ -114,61 +91,125 @@ button:hover {
     text-align: center;
 }
 
-#cards img {
-    width: 100%;
-    height: auto;
-}
-
-#cards.list section {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-align: left;
-}
-
-#cards.list img {
-    display: none;
-}
-
 /* =========================
-   JOIN PAGE
+   DISCOVER PAGE STYLES
    ========================= */
 
-.join-container {
+/* Visitor Message Styling */
+.visitor-banner {
+    background-color: var(--light-grey);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 1px solid var(--input-border);
+    font-weight: bold;
+}
+
+/* Base Card Styling */
+.discover-card {
+    border: 1px solid var(--light-grey);
+    padding: 10px;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.discover-card figure {
+    margin: 0;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.discover-card img:hover {
+    transform: scale(1.05);
+}
+
+.discover-card h2 {
+    margin-top: 0.5rem;
+}
+
+.discover-card address {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.discover-card button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
+
+/* -------------------------
+   Grid Layout - Responsive
+   ------------------------- */
+.discover-grid {
     display: grid;
-    gap: 1rem;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 20px;
+    padding: 10px;
 }
 
-.membership-cards {
-    display: grid;
-    gap: 1rem;
+.discover-card:nth-child(1) {
+    grid-area: card1;
 }
 
-/* Animation */
-.card {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease forwards;
+.discover-card:nth-child(2) {
+    grid-area: card2;
 }
 
-.card:nth-child(2) {
-    animation-delay: 0.2s;
+.discover-card:nth-child(3) {
+    grid-area: card3;
 }
 
-.card:nth-child(3) {
-    animation-delay: 0.4s;
+.discover-card:nth-child(4) {
+    grid-area: card4;
 }
 
-.card:nth-child(4) {
-    animation-delay: 0.6s;
+.discover-card:nth-child(5) {
+    grid-area: card5;
 }
 
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.discover-card:nth-child(6) {
+    grid-area: card6;
 }
+
+.discover-card:nth-child(7) {
+    grid-area: card7;
+}
+
+.discover-card:nth-child(8) {
+    grid-area: card8;
+}
+
 
 /* =========================
    FOOTER
@@ -180,59 +221,4 @@ footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
-}
-
-
-/* Visitor Message Styling */
-.visitor-banner {
-    background-color: #f0f0f0;
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    font-weight: bold;
-}
-
-/* Base Card Styling */
-.discover-card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-}
-
-.discover-card figure {
-    margin: 0;
-    overflow: hidden;
-}
-
-.discover-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.discover-card h2 {
-    margin-top: 0.5rem;
-}
-
-.discover-card address {
-    font-style: normal;
-    color: #555;
-    font-size: 0.9rem;
-}
-
-.discover-card button {
-    margin-top: auto;
-    padding: 10px;
-    cursor: pointer;
-}
-
-/* Grid Setup - Named Areas */
-.discover-grid {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
 }

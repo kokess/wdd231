@@ -1,15 +1,12 @@
 /* =========================
-   TABLET (600px+)
+   TABLET & DESKTOP (General Nav Fixes)
    ========================= */
 
 @media (min-width: 600px) {
-
-    /* ✅ Hide hamburger */
     #menuBtn {
         display: none;
     }
 
-    /* ✅ ALWAYS show nav */
     #navMenu {
         display: block !important;
     }
@@ -18,6 +15,7 @@
         flex-direction: row;
         justify-content: center;
         margin: 0;
+        gap: 2rem;
     }
 
     #cards.grid {
@@ -25,27 +23,13 @@
     }
 }
 
-/* =========================
-   DESKTOP (900px+)
-   ========================= */
-
 @media (min-width: 900px) {
-
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        /* ✅ FIX alignment */
         padding: 1rem 2rem;
-        text-align: left;
     }
 
     nav ul {
         justify-content: flex-end;
-    }
-
-    main {
-        padding: 2rem;
     }
 
     #cards.grid {
@@ -53,19 +37,14 @@
     }
 }
 
-/* Large: Custom Layout (1025px and above) */
 @media (min-width: 1025px) {
     .discover-grid {
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
-            "card1 card1 card2 card3"
-            "card4 card5 card5 card6"
-            "card7 card7 card8 card8";
-    }
-
-    .card img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+        gap: 20px;
+        padding: 20px;
     }
 }
-

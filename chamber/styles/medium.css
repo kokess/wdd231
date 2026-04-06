@@ -1,44 +1,13 @@
-@media (min-width: 641px) {
-    .discover-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        gap: 20px;
+        padding: 20px;
     }
-
-    .discover-card img:hover {
-        filter: brightness(1.1);
-    }
-}
-
-/* Assign Unique Cards to Grid Areas */
-/* We use nth-child to select them based on their order in the JSON */
-.discover-card:nth-child(1) {
-    grid-area: card1;
-}
-
-.discover-card:nth-child(2) {
-    grid-area: card2;
-}
-
-.discover-card:nth-child(3) {
-    grid-area: card3;
-}
-
-.discover-card:nth-child(4) {
-    grid-area: card4;
-}
-
-.discover-card:nth-child(5) {
-    grid-area: card5;
-}
-
-.discover-card:nth-child(6) {
-    grid-area: card6;
-}
-
-.discover-card:nth-child(7) {
-    grid-area: card7;
-}
-
-.discover-card:nth-child(8) {
-    grid-area: card8;
 }

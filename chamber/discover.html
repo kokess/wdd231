@@ -5,38 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Discover Lagos Chamber of Commerce Directory</title>
-    <meta name="description"
-        content="Welcome to the Lagos Chamber of Commerce – your hub for local business, events, and community growth.">
+    <title>Discover Lagos | Chamber of Commerce</title>
+
+    <meta name="description" content="Explore Lagos attractions, culture, and opportunities for business and tourism.">
     <meta name="author" content="Austine Dominic Essien">
 
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
-
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Lagos Chamber of Commerce">
-    <meta property="og:description"
-        content="Your hub for local business, community events, weather, and connecting with Lagos's thriving business community.">
-    <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/chamber-social.jpg">
-    <meta property="og:url" content="https://kokess.github.io/wdd231/chamber/index.html">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/discover.css">
 
-
-    <!-- JavaScript -->
-    <script src="scripts/discover.js" type="module"></script>
-
+    <!-- JS -->
+    <script type="module" src="scripts/discover.js" defer></script>
 </head>
 
 <body>
@@ -44,10 +26,9 @@
     <header>
         <h1>Lagos Chamber of Commerce</h1>
 
-        <!-- Accessible hamburger -->
-        <button id="menuBtn" aria-label="Toggle navigation">☰</button>
+        <!-- ✅ Hamburger -->
+        <button id="menuBtn">☰</button>
 
-        <!-- FIX: added id -->
         <nav id="navMenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -59,24 +40,17 @@
     </header>
 
     <main>
-        <div id="visitor-message" class="visitor-banner"></div>
         <h2>Discover Lagos</h2>
-        <section class="discover-grid">
-        </section>
-        
+
+        <!-- Visit message -->
+        <div id="visitMessage"></div>
+
+        <!-- Grid -->
+        <div id="discoverGrid"></div>
     </main>
 
     <footer>
-        <div class="footer-left">
-            <p><strong>Lagos Chamber of Commerce</strong></p>
-            <p>Commerce House, Victoria Island, Lagos</p>
-            <p>Email: info@lagoschamber.org</p>
-            <p>Phone: (+234) 8184237047</p>
-        </div>
-        <div class="footer-right">
-            <p>© <span id="year"></span> Austine Dominic Essien | WDD 231</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
-        </div>
+        <p>© <span id="year"></span> Austine Dominic Essien</p>
     </footer>
 
 </body>
