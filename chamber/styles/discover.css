@@ -6,10 +6,8 @@
     display: grid;
     gap: 1rem;
     padding: 1rem;
-}
 
-/* Named grid areas (mobile) */
-#discoverGrid {
+    /* Named grid areas (mobile) */
     grid-template-areas:
         "card1"
         "card2"
