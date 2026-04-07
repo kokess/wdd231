@@ -76,10 +76,3 @@
 .card p {
     font-size: 0.85rem;
 }
-
-#visitMessage {
-    padding: 1rem;
-    background: #e6f0ff;
-    margin: 1rem;
-    border-left: 4px solid #004080;
-}
