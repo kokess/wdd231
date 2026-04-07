@@ -1,0 +1,31 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    nav {
+        display: block;
+    }
+
+    #menuBtn {
+        display: none;
+    }
+}
+
+#discoverGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    background: #fff;
+}

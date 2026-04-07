@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attributions | Lagos Food Finder</title>
+  <meta name="description" content="Image and content attributions for Lagos Food Finder.">
+  <meta name="author" content="Austine Dominic Essien">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/utils.mjs"></script>
+  <script type="module">
+    import { setFooterYear, initNav } from './scripts/utils.mjs';
+    setFooterYear();
+    initNav();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo-wrap">
+      <span class="logo-icon" aria-hidden="true">🍽</span>
+      <h1>Lagos <span>Food</span> Finder</h1>
+    </div>
+    <button id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title mt-2">Attributions</h2>
+    <p class="page-intro">The following external resources were used in building this site.</p>
+
+    <section class="attr-section">
+      <h3 class="attr-heading">Images</h3>
+      <p>All restaurant placeholder images are sourced from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash License</a> (free for commercial and non-commercial use).</p>
+
+      <h3 class="attr-heading">Weather Data</h3>
+      <p>Weather information is fetched from the <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo API</a> — free, open-source weather API. No API key required.</p>
+
+      <h3 class="attr-heading">Fonts</h3>
+      <p>Roboto font served by <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a>.</p>
+
+      <h3 class="attr-heading">Restaurant Information</h3>
+      <p>Restaurant names, locations, and descriptions are based on publicly available information about Lagos dining establishments. Some details are illustrative for educational purposes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="contact.html">Contact</a>
+      <a href="attributions.html">Attributions</a>
+      <a href="https://www.youtube.com" target="_blank" rel="noopener">📹 Video Demo</a>
+    </div>
+    <p>&copy; <span id="year"></span> Lagos Food Finder | WDD 231 | Austine Dominic Essien</p>
+  </footer>
+</body>
+</html>

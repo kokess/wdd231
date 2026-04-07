@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lagos Food Finder | Discover the Best Nigerian Food</title>
+  <meta name="description" content="Find the best Nigerian restaurants, local dishes, and street food in Lagos. Your ultimate guide to Lagos dining.">
+  <meta name="author" content="Austine Dominic Essien">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lagos Food Finder | Discover the Best Nigerian Food">
+  <meta property="og:description" content="Find top restaurants, local dishes, and street food across Lagos, Nigeria.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1567364816519-cbc9c4ffe1eb?w=1200&q=80">
+  <meta property="og:url" content="https://kokess.github.io/wdd231/lagosfoods/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lagos Food Finder">
+  <meta name="twitter:description" content="Discover the best food and restaurants in Lagos, Nigeria.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1567364816519-cbc9c4ffe1eb?w=1200&q=80">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/home.css">
+
+  <!-- JS -->
+  <script type="module" src="scripts/home.mjs"></script>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="logo-wrap">
+      <span class="logo-icon" aria-hidden="true">🍽</span>
+      <h1>Lagos <span>Food</span> Finder</h1>
+    </div>
+    <button id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── Hero ── -->
+  <section class="hero" aria-label="Site introduction">
+    <h2>Find Your Next <span>Lagos Meal</span> 🌶</h2>
+    <p>From smoky suya on the street to upscale Nigerian cuisine — discover Lagos's rich and diverse food scene.</p>
+    <div class="hero-search" role="search">
+      <label for="heroSearch" class="sr-only">Search for food or restaurants</label>
+      <input type="search" id="heroSearch" placeholder="Try 'Jollof Rice' or 'Lekki'…" autocomplete="off">
+      <button id="heroSearchBtn" type="button" aria-label="Search">🔍 Search</button>
+    </div>
+  </section>
+
+  <!-- ── Stats Bar ── -->
+  <div class="stats-bar" aria-label="Site statistics">
+    <div class="stat-item">
+      <strong>16+</strong>
+      <span>Restaurants</span>
+    </div>
+    <div class="stat-item">
+      <strong>8</strong>
+      <span>Cuisines</span>
+    </div>
+    <div class="stat-item">
+      <strong>Lagos</strong>
+      <span>Nigeria</span>
+    </div>
+    <div class="stat-item">
+      <strong>Free</strong>
+      <span>Always</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ── Weather Widget ── -->
+    <div class="weather-widget" id="weatherWidget" aria-live="polite" aria-label="Lagos weather">
+      <div class="weather-icon" id="weatherIcon" aria-hidden="true">⛅</div>
+      <div class="weather-info">
+        <h3 id="weatherTitle">Lagos Weather</h3>
+        <p id="weatherDesc">Loading weather…</p>
+      </div>
+    </div>
+
+    <!-- ── Categories ── -->
+    <section aria-labelledby="catHeading">
+      <h2 class="section-title" id="catHeading">Browse by Category</h2>
+      <div class="categories" role="group" aria-label="Filter restaurants by category">
+        <button class="cat-btn active" data-filter="all">All</button>
+        <button class="cat-btn" data-filter="street food">🌮 Street Food</button>
+        <button class="cat-btn" data-filter="local">🍲 Local</button>
+        <button class="cat-btn" data-filter="fine dining">🍷 Fine Dining</button>
+        <button class="cat-btn" data-filter="seafood">🦞 Seafood</button>
+        <button class="cat-btn" data-filter="budget">💰 Budget</button>
+      </div>
+    </section>
+
+    <!-- ── Featured Restaurants ── -->
+    <section aria-labelledby="featuredHeading">
+      <h2 class="section-title" id="featuredHeading">Featured Restaurants</h2>
+      <div class="featured-grid" id="featuredGrid">
+        <!-- JS populated -->
+      </div>
+    </section>
+
+    <!-- ── Promo Banner ── -->
+    <div class="promo-banner" role="complementary" aria-label="Call to action">
+      <div>
+        <h3>Know a great Lagos spot?</h3>
+        <p>Help fellow food lovers discover hidden gems across the city.</p>
+      </div>
+      <a href="contact.html" class="btn btn-outline btn-promo">
+        Submit a Restaurant →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ── Modal ── -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Restaurant Details</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- JS populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="contact.html">Contact</a>
+      <a href="attributions.html">Attributions</a>
+      <a href="https://www.youtube.com" target="_blank" rel="noopener">📹 Video Demo</a>
+    </div>
+    <p>&copy; <span id="year"></span> Lagos Food Finder | WDD 231 | Austine Dominic Essien</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+<script>
+    const params = new URLSearchParams(window.location.search);
+    document.body.innerHTML += `<p>Name: ${params.get("name")}</p>`;
+</script>

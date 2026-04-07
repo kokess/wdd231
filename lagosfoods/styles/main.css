@@ -1,0 +1,462 @@
+/* ============================================================
+   LAGOS FOOD FINDER — main.css
+   Covers: reset, variables, header/nav, footer, modal, shared
+   ============================================================ */
+
+/* ── CSS Variables ────────────────────────────────────────── */
+:root {
+  --green:       #1f6f4a;
+  --green-dark:  #154d34;
+  --green-light: #e8f5ee;
+  --orange:      #f4a261;
+  --orange-dark: #e07b30;
+  --white:       #ffffff;
+  --off-white:   #fafaf8;
+  --text:        #1a1a1a;
+  --text-light:  #555555;
+  --border:      #dde8e2;
+  --shadow:      0 2px 12px rgba(0,0,0,0.10);
+  --radius:      10px;
+  --font:        'Roboto', sans-serif;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--off-white);
+  color: var(--text);
+  line-height: 1.6;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+header {
+  background: var(--green);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.logo-wrap h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.logo-wrap h1 span {
+  color: var(--orange);
+}
+
+/* ── Hamburger button ────────────────────────────────────── */
+#menuBtn {
+  background: none;
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-size: 1.3rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Nav ─────────────────────────────────────────────────── */
+#mainNav {
+  display: none;
+  width: 100%;
+}
+
+#mainNav.open {
+  display: block;
+}
+
+#mainNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0 0.25rem;
+}
+
+#mainNav a {
+  color: var(--white);
+  display: block;
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+#mainNav a:hover {
+  background: var(--green-dark);
+  text-decoration: none;
+}
+
+#mainNav a.active {
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* ── Tablet+ nav ─────────────────────────────────────────── */
+@media (min-width: 640px) {
+  #menuBtn {
+    display: none;
+  }
+  #mainNav {
+    display: block !important;
+    width: auto;
+  }
+  #mainNav ul {
+    flex-direction: row;
+    gap: 0.25rem;
+    padding: 0;
+    align-items: center;
+  }
+  .logo-wrap h1 {
+    font-size: 1.4rem;
+  }
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+footer {
+  background: var(--green-dark);
+  color: #c8ddd5;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.88rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: var(--orange);
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Main / Page ─────────────────────────────────────────── */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+/* ── Section headings ────────────────────────────────────── */
+.section-title {
+  font-size: 1.5rem;
+  color: var(--green);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+}
+
+.btn-orange {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.btn-orange:hover {
+  background: var(--orange-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.btn-outline:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* ── Tags / Badges ───────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  background: var(--green-light);
+  color: var(--green-dark);
+  border-radius: 20px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0.1rem;
+}
+
+/* ── Modal ───────────────────────────────────────────────── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: var(--radius);
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  overflow: hidden;
+  animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.modal-header {
+  background: var(--green);
+  color: var(--white);
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 1.1rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-body {
+  padding: 1.25rem;
+}
+
+.modal-body img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.modal-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0.75rem 0;
+  font-size: 0.88rem;
+}
+
+.modal-meta span {
+  color: var(--text-light);
+}
+
+.modal-meta strong {
+  color: var(--text);
+}
+
+.modal-stars {
+  color: var(--orange);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0.75rem 0;
+}
+
+.modal-specialty {
+  font-size: 0.88rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-tags {
+  margin-bottom: 0.75rem;
+}
+
+/* ── Utility ─────────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+.text-center  { text-align: center; }
+.mt-1         { margin-top: 0.5rem; }
+.mt-2         { margin-top: 1rem; }
+.mt-3         { margin-top: 1.5rem; }
+.mb-1         { margin-bottom: 0.5rem; }
+.mb-2         { margin-bottom: 1rem; }
+.text-muted   { color: var(--text-light); }
+.text-small   { font-size: 0.85rem; }
+.text-xsmall  { font-size: 0.82rem; }
+.w-full       { width: 100%; }
+.d-flex       { display: flex; }
+.flex-wrap    { flex-wrap: wrap; }
+.gap-1        { gap: 1rem; }
+.justify-center { justify-content: center; }
+
+/* ── Promo banner white link ─────────────────────────────────── */
+.btn-promo {
+  border-color: white;
+  color: white;
+}
+
+.btn-promo:hover {
+  background: white;
+  color: var(--green);
+}
+
+/* ── Fav toggle button wrapper ───────────────────────────────── */
+.fav-toggle-wrap {
+  margin-bottom: 1rem;
+}
+
+/* ── Preference card small elements ─────────────────────────── */
+.pref-note {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+}
+
+.pref-label {
+  font-size: 0.85rem;
+}
+
+.pref-select {
+  font-size: 0.85rem;
+}
+
+.pref-save {
+  width: 100%;
+  font-size: 0.88rem;
+}
+
+.pref-status {
+  font-size: 0.82rem;
+  color: var(--green);
+  margin-top: 0.4rem;
+}
+
+/* ── Page intro text ─────────────────────────────────────────── */
+.page-intro {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+/* ── Attributions page ───────────────────────────────────────── */
+.attr-section {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.attr-heading {
+  color: var(--green);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.attr-heading:first-child {
+  margin-top: 0;
+}

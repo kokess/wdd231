@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Submit | Lagos Food Finder</title>
+  <meta name="description" content="Contact Lagos Food Finder or submit a restaurant recommendation. Help us grow the best Lagos food directory.">
+  <meta name="author" content="Austine Dominic Essien">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Lagos Food Finder">
+  <meta property="og:description" content="Get in touch or submit a new restaurant to Lagos Food Finder.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1200&q=80">
+  <meta property="og:url" content="https://kokess.github.io/wdd231/lagosfoods/contact.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Lagos Food Finder">
+  <meta name="twitter:description" content="Submit a restaurant or contact us at Lagos Food Finder.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1200&q=80">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/contact.css">
+
+  <script type="module" src="scripts/contact.mjs"></script>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="logo-wrap">
+      <span class="logo-icon" aria-hidden="true">🍽</span>
+      <h1>Lagos <span>Food</span> Finder</h1>
+    </div>
+    <button id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h2 class="section-title mt-2">Get In Touch</h2>
+    <p class="page-intro">Submit a restaurant recommendation or send us a message.</p>
+
+    <div class="contact-wrap">
+
+      <!-- ── Form ── -->
+      <section aria-labelledby="formHeading">
+        <div class="contact-form">
+          <h2 id="formHeading">Submit a Restaurant</h2>
+
+          <form id="contactForm" action="formaction.html" method="get" novalidate>
+
+            <div class="form-group">
+              <label for="fullName">Your Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="fullName" name="name" required
+                     autocomplete="name" placeholder="e.g. Amaka Okonkwo"
+                     minlength="2" aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required
+                     autocomplete="email" placeholder="you@example.com"
+                     aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="restaurantName">Restaurant Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="restaurantName" name="restaurant" required
+                     placeholder="e.g. Buka Express" aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location / Area</label>
+              <input type="text" id="location" name="location"
+                     placeholder="e.g. Victoria Island, Lagos">
+            </div>
+
+            <div class="form-group">
+              <label for="cuisine">Cuisine Type</label>
+              <select id="cuisine" name="cuisine">
+                <option value="">-- Select a cuisine --</option>
+                <option value="Nigerian">Nigerian</option>
+                <option value="Yoruba">Yoruba</option>
+                <option value="Igbo">Igbo</option>
+                <option value="Northern Nigerian">Northern Nigerian</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Fast Food">Fast Food</option>
+                <option value="International">International</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Why should we feature it?</label>
+              <textarea id="message" name="message"
+                        placeholder="Tell us what makes this restaurant special…"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                Subscribe to our monthly Lagos food newsletter
+              </label>
+            </div>
+
+            <button type="submit" class="form-submit">🍽 Submit Restaurant</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ── Info Panel ── -->
+      <aside aria-label="Contact information">
+        <div class="contact-info">
+
+          <div class="info-card">
+            <h3>📍 Our Focus Area</h3>
+            <address>
+              Lagos State, Nigeria<br>
+              Covering all 20 Local Government Areas<br>
+              from Lagos Island to Epe
+            </address>
+          </div>
+
+          <div class="info-card">
+            <h3>📧 Email Us</h3>
+            <p><a href="/cdn-cgi/l/email-protection#274f424b4b48674b4640485441484843414e49434255094940"><span class="__cf_email__" data-cfemail="79111c1515163915181e160a1f16161d1f10171d1c0b57171e">[email&#160;protected]</span></a></p>
+          </div>
+
+          <div class="info-card">
+            <h3>🕐 Response Time</h3>
+            <p>We review all submissions within 48 hours. Approved restaurants are added to our directory weekly.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>📋 Submission Tips</h3>
+            <p>Include the restaurant's neighbourhood and what makes it stand out. Unique, authentic spots are prioritized.</p>
+          </div>
+
+          <!-- ── Visitor Preference Widget ── -->
+          <div class="info-card" id="prefCard">
+            <h3>⚙️ Your Preferences</h3>
+            <p class="pref-note">Saved locally on your device</p>
+            <div class="form-group">
+              <label for="prefCuisine" class="pref-label">Favourite cuisine</label>
+              <select id="prefCuisine" class="pref-select">
+                <option value="">-- Choose --</option>
+                <option value="Nigerian">Nigerian</option>
+                <option value="Street Food">Street Food</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Fine Dining">Fine Dining</option>
+              </select>
+            </div>
+            <button class="btn btn-primary mt-1 pref-save" id="savePref">Save Preference</button>
+            <p id="prefStatus" class="pref-status"></p>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="contact.html">Contact</a>
+      <a href="attributions.html">Attributions</a>
+      <a href="https://www.youtube.com" target="_blank" rel="noopener">📹 Video
