@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Discover Lagos | Chamber of Commerce</title>
-
     <meta name="description" content="Explore Lagos attractions, culture, and opportunities for business and tourism.">
     <meta name="author" content="Austine Dominic Essien">
-
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Discover Lagos: Attractions, Culture, and Business Opportunities">
     <meta property="og:description"
@@ -17,67 +14,53 @@
     <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/lagos-discover.jpg">
     <meta property="og:url" content="https://kokess.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://kokess.github.io/wdd231/chamber/images/lagos-discover.jpg">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Discover Lagos: Attractions, Culture, and Business Opportunities">
     <meta name="twitter:description"
         content="Explore the best of Lagos, from vibrant culture and local cuisine to top business opportunities and tourist attractions.">
     <meta name="twitter:image" content="https://kokess.github.io/wdd231/chamber/images/lagos-discover.jpg">
-
-
     <link rel="icon" href="images/favicon.ico">
-
     <!-- CSS -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/discover.css">
 
-    
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Google Fonts Stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <!-- JS -->
     <script type="module" src="scripts/discover.js"></script>
 </head>
 
 <body>
-
     <header>
         <h1>Lagos Chamber of Commerce</h1>
-
-        <!-- ✅ Hamburger -->
-        <button id="menuBtn">☰</button>
-
-        <nav id="navMenu">
+        <!-- Hamburger button -->
+        <button id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+        <nav id="navMenu" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <h2>Discover Lagos</h2>
-
         <!-- Visit message -->
-        <div id="visitMessage"></div>
-
+        <div id="visitMessage" role="status" aria-live="polite"></div>
         <!-- Grid -->
-        <div id="discoverGrid"></div>
+        <div id="discoverGrid" class="discover-grid"></div>
     </main>
-
     <footer>
-        <p>© <span id="year"></span> Austine Dominic Essien</p>
+        <p>&copy; <span id="year"></span> Austine Dominic Essien | Lagos Chamber of Commerce</p>
     </footer>
-
 </body>
 
 </html>
