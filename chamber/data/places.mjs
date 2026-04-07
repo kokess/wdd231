@@ -3,7 +3,7 @@ export const places = [
         name: "Lekki Conservation Centre",
         address: "Lekki, Lagos",
         description: "A nature reserve with Africa's longest canopy walkway.",
-        image: "lekki-conservation-centre.webp"
+        image: "lekki-centre.webp"
     },
     {
         name: "Nike Art Gallery",
