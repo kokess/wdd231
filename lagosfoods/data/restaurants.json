@@ -9,8 +9,12 @@
     "specialty": "Jollof Rice & Egusi Soup",
     "description": "A beloved neighborhood buka serving authentic Lagos street food with generous portions.",
     "hours": "7am – 9pm",
-    "image": "https://images.https://unsplash.com/photos/a-plate-of-food-dqbqj3mdFfA",
-    "tags": ["street food", "local", "affordable"]
+    "image": "images/buka-express.webp",
+    "tags": [
+      "street food",
+      "local",
+      "affordable"
+    ]
   },
   {
     "id": 2,
@@ -22,8 +26,12 @@
     "specialty": "Pepper Soup & Pounded Yam",
     "description": "An iconic Lagos restaurant chain offering classic Nigerian comfort meals in a relaxed setting.",
     "hours": "8am – 10pm",
-    "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=400&q=80",
-    "tags": ["family dining", "traditional", "popular"]
+    "image": "images/mama-cass.webp",
+    "tags": [
+      "family dining",
+      "traditional",
+      "popular"
+    ]
   },
   {
     "id": 3,
@@ -33,10 +41,14 @@
     "price": "₦800–₦2,000",
     "rating": 4.8,
     "specialty": "Suya & Kilishi",
-    "description": "The most talked-about suya spot in Surulere — smoky skewers, perfect spice blend, and grilled to order.",
+    "description": "The most talked-about suya spot in Surulere — smoky skewers, perfect spice blend, grilled to order.",
     "hours": "4pm – 12am",
-    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80",
-    "tags": ["grilled", "night food", "street food"]
+    "image": "images/suya-spot.webp",
+    "tags": [
+      "grilled",
+      "night food",
+      "street food"
+    ]
   },
   {
     "id": 4,
@@ -48,8 +60,12 @@
     "specialty": "Afang Soup & Grilled Fish",
     "description": "Celebrity chef Abby Mbaso's flagship restaurant blending Nigerian heritage with modern culinary technique.",
     "hours": "12pm – 11pm",
-    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80",
-    "tags": ["fine dining", "fusion", "upscale"]
+    "image": "images/yellow-chilli.webp",
+    "tags": [
+      "fine dining",
+      "fusion",
+      "upscale"
+    ]
   },
   {
     "id": 5,
@@ -61,8 +77,12 @@
     "specialty": "Amala & Gbegiri",
     "description": "Legendary amala spot. The gbegiri-ewedu combo here has no rival in all of Lagos. Always a queue.",
     "hours": "6am – 3pm",
-    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80",
-    "tags": ["breakfast", "yoruba", "local favourite"]
+    "image": "images/amala-joint.webp",
+    "tags": [
+      "breakfast",
+      "yoruba",
+      "local favourite"
+    ]
   },
   {
     "id": 6,
@@ -74,8 +94,12 @@
     "specialty": "Banga Soup & Seafood Okra",
     "description": "Upscale Delta cuisine experience bringing the flavours of the Niger Delta to Lagos's food elite.",
     "hours": "11am – 10pm",
-    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=400&q=80",
-    "tags": ["seafood", "upscale", "delta cuisine"]
+    "image": "images/nkoyo.webp",
+    "tags": [
+      "seafood",
+      "upscale",
+      "delta cuisine"
+    ]
   },
   {
     "id": 7,
@@ -87,8 +111,12 @@
     "specialty": "Grilled Chicken & Jollof Rice",
     "description": "Nigeria's most popular fast-food chain, offering crispy chicken and classic sides with quick service.",
     "hours": "8am – 11pm",
-    "image": "https://images.unsplash.com/photo-1562967914-608f82629710?w=400&q=80",
-    "tags": ["fast food", "quick service", "popular"]
+    "image": "images/chicken-republic.webp",
+    "tags": [
+      "fast food",
+      "quick service",
+      "popular"
+    ]
   },
   {
     "id": 8,
@@ -100,8 +128,12 @@
     "specialty": "Eba & Okra Soup",
     "description": "No-frills, full-flavour. Iya Basira has been feeding Mushin since 1992. Best value meal in Lagos.",
     "hours": "6am – 2pm",
-    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80",
-    "tags": ["budget", "street food", "local"]
+    "image": "images/iya-basira.webp",
+    "tags": [
+      "budget",
+      "street food",
+      "local"
+    ]
   },
   {
     "id": 9,
@@ -113,8 +145,12 @@
     "specialty": "Sushi & Dim Sum",
     "description": "Lagos's premier pan-Asian experience with a curated sake menu and stunning harbour views.",
     "hours": "12pm – 12am",
-    "image": "https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=400&q=80",
-    "tags": ["asian", "fine dining", "sushi"]
+    "image": "images/shiro.webp",
+    "tags": [
+      "asian",
+      "fine dining",
+      "sushi"
+    ]
   },
   {
     "id": 10,
@@ -126,8 +162,12 @@
     "specialty": "Ofada Rice & Ayamase",
     "description": "Cultural hub and restaurant celebrating Nigerian arts and contemporary cuisine under one roof.",
     "hours": "9am – 10pm",
-    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80",
-    "tags": ["arts", "contemporary", "cultural"]
+    "image": "images/terra-kulture.webp",
+    "tags": [
+      "arts",
+      "contemporary",
+      "cultural"
+    ]
   },
   {
     "id": 11,
@@ -139,8 +179,12 @@
     "specialty": "Edikaikong & Seafood Pepper Soup",
     "description": "A Lagos dining institution since 1986, famous for traditional Nigerian soups and stews.",
     "hours": "7am – 10pm",
-    "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80",
-    "tags": ["traditional", "institution", "popular"]
+    "image": "images/jevinik.webp",
+    "tags": [
+      "traditional",
+      "institution",
+      "popular"
+    ]
   },
   {
     "id": 12,
@@ -150,10 +194,14 @@
     "price": "₦4,000–₦10,000",
     "rating": 4.6,
     "specialty": "Moi Moi & Grilled Tilapia",
-    "description": "Boutique hotel restaurant with live music and a menu that celebrates the full diversity of Nigerian cooking.",
+    "description": "Boutique hotel restaurant with live music and a menu celebrating the full diversity of Nigerian cooking.",
     "hours": "7am – 11pm",
-    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80",
-    "tags": ["live music", "eclectic", "boutique"]
+    "image": "images/bogobiri.webp",
+    "tags": [
+      "live music",
+      "eclectic",
+      "boutique"
+    ]
   },
   {
     "id": 13,
@@ -165,8 +213,12 @@
     "specialty": "Oha Soup & Ukwa",
     "description": "Specializing in authentic Igbo dishes, this gem in Ajah draws food lovers from across the city.",
     "hours": "8am – 8pm",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80",
-    "tags": ["igbo", "authentic", "hidden gem"]
+    "image": "images/pots-and-peppers.webp",
+    "tags": [
+      "igbo",
+      "authentic",
+      "hidden gem"
+    ]
   },
   {
     "id": 14,
@@ -178,8 +230,12 @@
     "specialty": "Fresh Crab & Lobster",
     "description": "Pick your fish fresh from the market and have it cooked on the spot — an unmissable Lagos experience.",
     "hours": "10am – 8pm",
-    "image": "https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=80",
-    "tags": ["seafood", "fresh", "market experience"]
+    "image": "images/lagos-seafood.webp",
+    "tags": [
+      "seafood",
+      "fresh",
+      "market experience"
+    ]
   },
   {
     "id": 15,
@@ -191,8 +247,12 @@
     "specialty": "Agege Bread & Akara",
     "description": "Named after Lagos's iconic yellow buses, Danfo Bites is the ultimate Lagos street food experience.",
     "hours": "5am – 4pm",
-    "image": "https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=400&q=80",
-    "tags": ["breakfast", "budget", "street food"]
+    "image": "images/danfo-bites.webp",
+    "tags": [
+      "breakfast",
+      "budget",
+      "street food"
+    ]
   },
   {
     "id": 16,
@@ -204,7 +264,11 @@
     "specialty": "Grilled Steak & Pasta",
     "description": "A Lagos VI classic offering a broad international menu with a beautiful waterfront terrace.",
     "hours": "12pm – 11pm",
-    "image": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=400&q=80",
-    "tags": ["international", "waterfront", "fine dining"]
+    "image": "images/cactus-restaurant.webp",
+    "tags": [
+      "international",
+      "waterfront",
+      "fine dining"
+    ]
   }
 ]
