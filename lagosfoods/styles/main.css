@@ -58,7 +58,7 @@ header {
   color: var(--white);
   padding: 0.75rem 1rem;
   display: flex;
-  flex-wrap: wrap;
+  lff-flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
@@ -186,7 +186,7 @@ footer a:hover {
 
 footer .footer-links {
   display: flex;
-  flex-wrap: wrap;
+  lff-flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 0.75rem;
@@ -220,7 +220,7 @@ main {
 }
 
 /* ── Buttons ─────────────────────────────────────────────── */
-.btn {
+.lff-btn {
   display: inline-block;
   padding: 0.55rem 1.2rem;
   border-radius: 6px;
@@ -231,36 +231,36 @@ main {
   transition: background 0.2s, transform 0.15s;
 }
 
-.btn:hover {
+.lff-btn:hover {
   transform: translateY(-1px);
   text-decoration: none;
 }
 
-.btn-primary {
+.lff-btn-primary {
   background: var(--green);
   color: var(--white);
 }
 
-.btn-primary:hover {
+.lff-btn-primary:hover {
   background: var(--green-dark);
 }
 
-.btn-orange {
+.lff-btn-orange {
   background: var(--orange-dark);
   color: var(--white);
 }
 
-.btn-orange:hover {
+.lff-btn-orange:hover {
   background: var(--orange-text);
 }
 
-.btn-outline {
+.lff-btn-outline {
   background: transparent;
   color: var(--green);
   border: 2px solid var(--green);
 }
 
-.btn-outline:hover {
+.lff-btn-outline:hover {
   background: var(--green);
   color: var(--white);
 }
@@ -401,23 +401,23 @@ main {
   text-align: center;
 }
 
-.mt-1 {
+.lff-mt1 {
   margin-top: 0.5rem;
 }
 
-.mt-2 {
+.lff-mt2 {
   margin-top: 1rem;
 }
 
-.mt-3 {
+.lff-mt3 {
   margin-top: 1.5rem;
 }
 
-.mb-1 {
+.lff-mb1 {
   margin-bottom: 0.5rem;
 }
 
-.mb-2 {
+.lff-mb2 {
   margin-bottom: 1rem;
 }
 
@@ -433,33 +433,33 @@ main {
   font-size: 0.82rem;
 }
 
-.w-full {
+.lff-w-full {
   width: 100%;
 }
 
-.d-flex {
+.lff-dflex {
   display: flex;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
+.lff-flex-wrap {
+  lff-flex-wrap: wrap;
 }
 
-.gap-1 {
+.lff-gap1 {
   gap: 1rem;
 }
 
-.justify-center {
+.lff-justify-center {
   justify-content: center;
 }
 
 /* ── Promo banner white link ─────────────────────────────────── */
-.btn-promo {
+.lff-btn-promo {
   border-color: white;
   color: white;
 }
 
-.btn-promo:hover {
+.lff-btn-promo:hover {
   background: white;
   color: var(--green);
 }

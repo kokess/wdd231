@@ -17,7 +17,10 @@
 }
 
 .hero h2 span {
-  color: var(--orange);
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 4px;
 }
 
 .hero p {
@@ -34,7 +37,7 @@
   gap: 0;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hero-search input {
@@ -48,7 +51,7 @@
 
 .hero-search button {
   padding: 0.75rem 1.2rem;
-  background: var(--orange);
+  background: var(--orange-dark);
   color: var(--white);
   border: none;
   font-size: 1rem;
@@ -58,7 +61,7 @@
 }
 
 .hero-search button:hover {
-  background: var(--orange-dark);
+  background: var(--orange-text);
 }
 
 /* ── Stats bar ───────────────────────────────────────────── */
@@ -67,7 +70,7 @@
   border-bottom: 2px solid var(--border);
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  lff-flex-wrap: wrap;
   gap: 0;
 }
 
@@ -90,7 +93,7 @@
 
 .stat-item span {
   font-size: 0.8rem;
-  color: var(--text-light);
+  color: var(--text);
 }
 
 /* ── Featured section ────────────────────────────────────── */
@@ -123,7 +126,7 @@
 
 .featured-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 .featured-card img {
@@ -152,19 +155,19 @@
 }
 
 .card-stars {
-  color: var(--orange);
+  color: var(--orange-text);
   font-size: 0.9rem;
 }
 
 /* ── Quick categories ────────────────────────────────────── */
 .categories {
   display: flex;
-  flex-wrap: wrap;
+  lff-flex-wrap: wrap;
   gap: 0.6rem;
   margin-bottom: 1.5rem;
 }
 
-.cat-btn {
+.lff-cat-btn {
   padding: 0.45rem 1rem;
   border-radius: 25px;
   border: 2px solid var(--green);
@@ -177,8 +180,8 @@
   font-family: var(--font);
 }
 
-.cat-btn:hover,
-.cat-btn.active {
+.lff-cat-btn:hover,
+.lff-cat-btn.active {
   background: var(--green);
   color: var(--white);
 }
@@ -212,14 +215,14 @@
 
 /* ── Promo banner ────────────────────────────────────────── */
 .promo-banner {
-  background: var(--orange);
+  background: var(--green-dark);
   color: var(--white);
   border-radius: var(--radius);
   padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  lff-flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
 }

@@ -23,7 +23,7 @@
 /* ── Controls bar ────────────────────────────────────────── */
 .controls {
   display: flex;
-  flex-wrap: wrap;
+  lff-flex-wrap: wrap;
   gap: 0.75rem;
   align-items: center;
   padding: 1rem 0;
@@ -108,7 +108,7 @@
 
 .restaurant-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
 }
 
 .restaurant-card img {
@@ -137,7 +137,7 @@
 }
 
 .r-stars {
-  color: var(--orange);
+  color: var(--orange-text);
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
 }
@@ -160,7 +160,7 @@
   flex: 1;
 }
 
-.card-btn {
+.card-lff-btn {
   width: 100%;
   padding: 0.5rem;
   background: var(--green);
@@ -174,7 +174,7 @@
   font-family: var(--font);
 }
 
-.card-btn:hover {
+.lff-card-btn:hover {
   background: var(--green-dark);
 }
 
@@ -192,7 +192,7 @@
 }
 
 /* ── Favourites toggle ───────────────────────────────────── */
-.fav-btn {
+.fav-lff-btn {
   background: none;
   border: none;
   font-size: 1.1rem;
