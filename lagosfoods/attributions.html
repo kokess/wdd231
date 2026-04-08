@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Attributions | Lagos Food Finder</title>
-  <meta name="description" content="Image and content attributions for Lagos Food Finder.">
+  <meta name="description"
+    content="Image and content attributions for Lagos Food Finder. Sources for images, weather data, fonts, and restaurant information used on this site.">
   <meta name="author" content="Austine Dominic Essien">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Attributions & Credits | Lagos Food Finder">
+  <meta property="og:description"
+    content="Sources and credits for images, weather data, fonts, and restaurant information used on the Lagos Food Finder website.">
+  <meta property="og:image" content="images/og-image.svg">
+  <meta property="og:url" content="https://kokess.github.io/wdd231/lagosfoods/attributions.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Attributions | Lagos Food Finder">
+  <meta name="twitter:description"
+    content="Sources and credits for images, weather data, fonts, and restaurant information used on this site.">
+  <meta name="twitter:image" content="images/og-image.svg">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS: two files -->
   <link rel="stylesheet" href="styles/main.css">
-  <script type="module" src="scripts/utils.mjs"></script>
-  <script type="module">
-    import { setFooterYear, initNav } from './scripts/utils.mjs';
-    setFooterYear();
-    initNav();
-  </script>
+  <link rel="stylesheet" href="styles/attributions.css">
+
+  <!-- JS: external module only -->
+  <script type="module" src="scripts/attributions.mjs"></script>
 </head>
+
 <body>
+
   <header>
     <div class="logo-wrap">
       <span class="logo-icon" aria-hidden="true">🍽</span>
@@ -40,16 +61,21 @@
 
     <section class="attr-section">
       <h3 class="attr-heading">Images</h3>
-      <p>All restaurant placeholder images are sourced from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> and used under the <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash License</a> (free for commercial and non-commercial use).</p>
+      <p>All restaurant images are locally generated for this educational project. Original food photography inspiration
+        sourced from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> under the <a
+          href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash License</a>.</p>
 
       <h3 class="attr-heading">Weather Data</h3>
-      <p>Weather information is fetched from the <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo API</a> — free, open-source weather API. No API key required.</p>
+      <p>Live weather information is fetched from the <a href="https://open-meteo.com" target="_blank"
+          rel="noopener">Open-Meteo API</a> — a free, open-source weather API requiring no API key.</p>
 
       <h3 class="attr-heading">Fonts</h3>
-      <p>Roboto font served by <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a>.</p>
+      <p>Roboto typeface served via <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a>
+        under the Apache License 2.0.</p>
 
       <h3 class="attr-heading">Restaurant Information</h3>
-      <p>Restaurant names, locations, and descriptions are based on publicly available information about Lagos dining establishments. Some details are illustrative for educational purposes.</p>
+      <p>Restaurant names, locations, and descriptions are based on publicly available information about Lagos dining
+        establishments. Some details are illustrative for educational purposes only.</p>
     </section>
   </main>
 
@@ -63,5 +89,7 @@
     </div>
     <p>&copy; <span id="year"></span> Lagos Food Finder | WDD 231 | Austine Dominic Essien</p>
   </footer>
+
 </body>
+
 </html>

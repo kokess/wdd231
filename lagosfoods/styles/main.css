@@ -287,13 +287,6 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  color: #1a1a1a;
-  /* explicitly set so text inherits from modal box not overlay */
-}
-
-/* Ensure modal content always reads from white background */
-.modal {
-  color: #1a1a1a;
 }
 
 .modal-overlay.open {
@@ -302,6 +295,7 @@ main {
 
 .modal {
   background: var(--white);
+  color: var(--text);
   border-radius: var(--radius);
   max-width: 520px;
   width: 100%;
