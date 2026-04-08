@@ -5,23 +5,26 @@
 
 /* ── CSS Variables ────────────────────────────────────────── */
 :root {
-  --green:       #1f6f4a;
-  --green-dark:  #154d34;
+  --green: #1f6f4a;
+  --green-dark: #154d34;
   --green-light: #e8f5ee;
-  --orange:      #f4a261;
-  --orange-dark: #e07b30;
-  --white:       #ffffff;
-  --off-white:   #fafaf8;
-  --text:        #1a1a1a;
-  --text-light:  #555555;
-  --border:      #dde8e2;
-  --shadow:      0 2px 12px rgba(0,0,0,0.10);
-  --radius:      10px;
-  --font:        'Roboto', sans-serif;
+  --orange: #f4a261;
+  --orange-dark: #b85c00;
+  --orange-text: #b34d00;
+  --white: #ffffff;
+  --off-white: #ffffff;
+  --text: #1a1a1a;
+  --text-light: #595959;
+  --border: #dde8e2;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  --radius: 10px;
+  --font: 'Roboto', sans-serif;
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -80,7 +83,8 @@ header {
 }
 
 .logo-wrap h1 span {
-  color: var(--orange);
+  color: var(--white);
+  opacity: 0.9;
 }
 
 /* ── Hamburger button ────────────────────────────────────── */
@@ -132,8 +136,8 @@ header {
 }
 
 #mainNav a.active {
-  background: var(--orange);
-  color: var(--white);
+  background: var(--white);
+  color: var(--green-dark);
   font-weight: 700;
 }
 
@@ -142,16 +146,19 @@ header {
   #menuBtn {
     display: none;
   }
+
   #mainNav {
     display: block !important;
     width: auto;
   }
+
   #mainNav ul {
     flex-direction: row;
     gap: 0.25rem;
     padding: 0;
     align-items: center;
   }
+
   .logo-wrap h1 {
     font-size: 1.4rem;
   }
@@ -168,11 +175,13 @@ footer {
 }
 
 footer a {
-  color: var(--orange);
+  color: var(--white);
+  text-decoration: underline;
 }
 
 footer a:hover {
-  color: var(--white);
+  color: var(--orange);
+  text-decoration: none;
 }
 
 footer .footer-links {
@@ -237,12 +246,12 @@ main {
 }
 
 .btn-orange {
-  background: var(--orange);
+  background: var(--orange-dark);
   color: var(--white);
 }
 
 .btn-orange:hover {
-  background: var(--orange-dark);
+  background: var(--orange-text);
 }
 
 .btn-outline {
@@ -273,11 +282,18 @@ main {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.65);
   z-index: 1000;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  color: #1a1a1a;
+  /* explicitly set so text inherits from modal box not overlay */
+}
+
+/* Ensure modal content always reads from white background */
+.modal {
+  color: #1a1a1a;
 }
 
 .modal-overlay.open {
@@ -289,14 +305,21 @@ main {
   border-radius: var(--radius);
   max-width: 520px;
   width: 100%;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
   overflow: hidden;
   animation: modalIn 0.25s ease;
 }
 
 @keyframes modalIn {
-  from { transform: translateY(30px); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-header {
@@ -350,7 +373,7 @@ main {
 }
 
 .modal-stars {
-  color: var(--orange);
+  color: var(--orange-text);
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
@@ -376,24 +399,65 @@ main {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
 
-.text-center  { text-align: center; }
-.mt-1         { margin-top: 0.5rem; }
-.mt-2         { margin-top: 1rem; }
-.mt-3         { margin-top: 1.5rem; }
-.mb-1         { margin-bottom: 0.5rem; }
-.mb-2         { margin-bottom: 1rem; }
-.text-muted   { color: var(--text-light); }
-.text-small   { font-size: 0.85rem; }
-.text-xsmall  { font-size: 0.82rem; }
-.w-full       { width: 100%; }
-.d-flex       { display: flex; }
-.flex-wrap    { flex-wrap: wrap; }
-.gap-1        { gap: 1rem; }
-.justify-center { justify-content: center; }
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.text-small {
+  font-size: 0.85rem;
+}
+
+.text-xsmall {
+  font-size: 0.82rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
 
 /* ── Promo banner white link ─────────────────────────────────── */
 .btn-promo {
@@ -443,7 +507,25 @@ main {
   color: var(--text-light);
 }
 
-/* ── Attributions page ───────────────────────────────────────── */
+/* ── Card specialty text (home featured cards) ───────────────── */
+.card-specialty {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+/* ── No results messages ─────────────────────────────────────── */
+.no-results-msg {
+  color: var(--text-light);
+  grid-column: 1 / -1;
+  padding: 1rem 0;
+}
+
+.no-results-sub {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
 .attr-section {
   background: var(--white);
   border-radius: var(--radius);
