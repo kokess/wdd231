@@ -4,6 +4,7 @@
 
 /* ── Page hero ───────────────────────────────────────────── */
 .page-hero {
+  background-color: var(--green);
   background: linear-gradient(to right, var(--green-dark), var(--green));
   color: var(--white);
   padding: 2rem 1rem;
@@ -160,7 +161,7 @@
   flex: 1;
 }
 
-.card-lff-btn {
+.lff-card-btn {
   width: 100%;
   padding: 0.5rem;
   background: var(--green);
@@ -192,7 +193,7 @@
 }
 
 /* ── Favourites toggle ───────────────────────────────────── */
-.fav-lff-btn {
+.lff-fav-btn {
   background: none;
   border: none;
   font-size: 1.1rem;

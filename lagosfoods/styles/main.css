@@ -12,10 +12,10 @@
   --orange-dark: #b85c00;
   --orange-text: #b34d00;
   --white: #ffffff;
-  --off-white: #ffffff;
   --text: #1a1a1a;
   --text-light: #595959;
   --border: #dde8e2;
+  --footer-text: #c8ddd5;
   --shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
   --radius: 10px;
   --font: 'Roboto', sans-serif;
@@ -32,7 +32,7 @@
 
 body {
   font-family: var(--font);
-  background: var(--off-white);
+  background: var(--white);
   color: var(--text);
   line-height: 1.6;
   min-width: 320px;
@@ -167,7 +167,7 @@ header {
 /* ── Footer ──────────────────────────────────────────────── */
 footer {
   background: var(--green-dark);
-  color: #c8ddd5;
+  color: var(--footer-text);
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.88rem;
@@ -287,6 +287,8 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  color: transparent;
+  /* prevent text color from being measured against dark overlay bg */
 }
 
 .modal-overlay.open {
@@ -325,9 +327,6 @@ main {
   align-items: center;
 }
 
-.modal-header h2 {
-  font-size: 1.1rem;
-}
 
 .modal-close {
   background: none;
@@ -397,10 +396,6 @@ main {
   white-space: nowrap;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .lff-mt1 {
   margin-top: 0.5rem;
 }
@@ -409,28 +404,8 @@ main {
   margin-top: 1rem;
 }
 
-.lff-mt3 {
-  margin-top: 1.5rem;
-}
-
-.lff-mb1 {
-  margin-bottom: 0.5rem;
-}
-
-.lff-mb2 {
-  margin-bottom: 1rem;
-}
-
 .text-muted {
   color: var(--text-light);
-}
-
-.text-small {
-  font-size: 0.85rem;
-}
-
-.text-xsmall {
-  font-size: 0.82rem;
 }
 
 .lff-w-full {
@@ -455,12 +430,12 @@ main {
 
 /* ── Promo banner white link ─────────────────────────────────── */
 .lff-btn-promo {
-  border-color: white;
-  color: white;
+  border-color: var(--white);
+  color: var(--white);
 }
 
 .lff-btn-promo:hover {
-  background: white;
+  background: var(--white);
   color: var(--green);
 }
 
@@ -509,15 +484,14 @@ main {
 }
 
 /* ── No results messages ─────────────────────────────────────── */
-.no-results-msg {
+.no-results-msg,
+.no-results-sub {
   color: var(--text-light);
-  grid-column: 1 / -1;
-  padding: 1rem 0;
 }
 
-.no-results-sub {
-  font-size: 0.9rem;
-  color: var(--text-light);
+.no-results-msg {
+  grid-column: 1 / -1;
+  padding: 1rem 0;
 }
 
 .attr-section {

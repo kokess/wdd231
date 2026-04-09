@@ -4,7 +4,8 @@
 
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, #2d9e6b 100%);
+  background-color: var(--green);
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
   color: var(--white);
   padding: 3rem 1rem 2.5rem;
   text-align: center;
@@ -188,7 +189,7 @@
 
 /* ── Weather widget ──────────────────────────────────────── */
 .weather-widget {
-  background: linear-gradient(135deg, #1f6f4a, #2d9e6b);
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
   color: var(--white);
   border-radius: var(--radius);
   padding: 1.25rem;
