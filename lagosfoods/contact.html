@@ -4,22 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact & Submit | Lagos Food Finder</title>
+  <title>Contact &amp; Submit a Restaurant | Lagos Food Finder</title>
   <meta name="description"
     content="Contact Lagos Food Finder or submit a restaurant recommendation. Help us grow the best Lagos food directory.">
   <meta name="author" content="Austine Dominic Essien">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Contact & Submit a Restaurant | Lagos Food Finder">
-  <meta property="og:description" content="Get in touch or submit a new restaurant to Lagos Food Finder.">
+  <meta property="og:title" content="Contact &amp; Submit a Restaurant | Lagos Food Finder">
+  <meta property="og:description"
+    content="Get in touch or submit a new restaurant recommendation to the Lagos Food Finder directory.">
   <meta property="og:image" content="https://kokess.github.io/wdd231/lagosfoods/images/og-image.svg">
   <meta property="og:url" content="https://kokess.github.io/wdd231/lagosfoods/contact.html">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact | Lagos Food Finder">
-  <meta name="twitter:description" content="Submit a restaurant or contact us at Lagos Food Finder.">
+  <meta name="twitter:title" content="Contact &amp; Submit a Restaurant | Lagos Food Finder">
+  <meta name="twitter:description" content="Submit a restaurant or get in touch with the Lagos Food Finder team.">
   <meta name="twitter:image" content="https://kokess.github.io/wdd231/lagosfoods/images/og-image.svg">
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -36,7 +37,6 @@
 
 <body>
 
-  <!-- ── Header ── -->
   <header>
     <div class="logo-wrap">
       <span class="logo-icon" aria-hidden="true">🍽</span>
@@ -59,7 +59,7 @@
 
     <div class="contact-wrap">
 
-      <!-- ── Form ── -->
+      <!-- Form -->
       <section aria-labelledby="formHeading">
         <div class="contact-form">
           <h2 id="formHeading">Submit a Restaurant</h2>
@@ -69,19 +69,17 @@
             <div class="form-group">
               <label for="fullName">Your Name <span aria-hidden="true">*</span></label>
               <input type="text" id="fullName" name="name" required autocomplete="name" placeholder="e.g. Amaka Okonkwo"
-                minlength="2" aria-required="true">
+                minlength="2">
             </div>
 
             <div class="form-group">
               <label for="email">Email Address <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com"
-                aria-required="true">
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
             </div>
 
             <div class="form-group">
               <label for="restaurantName">Restaurant Name <span aria-hidden="true">*</span></label>
-              <input type="text" id="restaurantName" name="restaurant" required placeholder="e.g. Buka Express"
-                aria-required="true">
+              <input type="text" id="restaurantName" name="restaurant" required placeholder="e.g. Buka Express">
             </div>
 
             <div class="form-group">
@@ -122,7 +120,7 @@
         </div>
       </section>
 
-      <!-- ── Info Panel ── -->
+      <!-- Info Panel -->
       <aside aria-label="Contact information">
         <div class="contact-info">
 
@@ -151,7 +149,7 @@
               prioritized.</p>
           </div>
 
-          <!-- ── Visitor Preference Widget ── -->
+          <!-- Visitor Preference Widget -->
           <div class="info-card" id="prefCard">
             <h3>⚙️ Your Preferences</h3>
             <p class="pref-note">Saved locally on your device</p>
@@ -176,11 +174,17 @@
 
   </main>
 
-  <!-- ── Footer ── -->
   <footer>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="restaurants.html">Restaurants</a>
       <a href="contact.html">Contact</a>
       <a href="attributions.html">Attributions</a>
-      <a href="https://www.youtube.com" target="_blank" rel="noopener">📹 Video
+      <a href="https://www.youtube.com" target="_blank" rel="noopener">📹 Video Demo</a>
+    </div>
+    <p>&copy; <span id="year"></span> Lagos Food Finder | WDD 231 | Austine Dominic Essien</p>
+  </footer>
+
+</body>
+
+</html>
