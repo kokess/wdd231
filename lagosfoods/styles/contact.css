@@ -29,11 +29,11 @@
   margin-bottom: 1.25rem;
 }
 
-.form-group {
+.lff-field {
   margin-bottom: 1rem;
 }
 
-.form-group label {
+.lff-field label {
   display: block;
   font-size: 0.9rem;
   font-weight: 600;
@@ -41,9 +41,9 @@
   color: var(--text);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.lff-field input,
+.lff-field select,
+.lff-field textarea {
   width: 100%;
   padding: 0.6rem 0.85rem;
   border: 1.5px solid var(--border);
@@ -57,18 +57,18 @@
   resize: vertical;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.lff-field input:focus,
+.lff-field select:focus,
+.lff-field textarea:focus {
   border-color: var(--green);
   background: var(--white);
 }
 
-.form-group textarea {
+.lff-field textarea {
   min-height: 110px;
 }
 
-.form-group input[type="checkbox"] {
+.lff-field input[type="checkbox"] {
   width: auto;
   margin-right: 0.4rem;
 }
@@ -80,7 +80,7 @@
   cursor: pointer;
 }
 
-.form-submit {
+.lff-form-submit {
   width: 100%;
   padding: 0.75rem;
   background: var(--green);
@@ -95,7 +95,7 @@
   margin-top: 0.5rem;
 }
 
-.form-submit:hover {
+.lff-form-submit:hover {
   background: var(--green-dark);
 }
 

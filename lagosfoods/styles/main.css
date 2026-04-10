@@ -142,7 +142,7 @@ header {
   text-decoration: none;
 }
 
-#mainNav a.active {
+#mainNav a.lff-active {
   background: var(--white);
   color: var(--green-dark);
   font-weight: 700;
@@ -191,7 +191,7 @@ footer a:hover {
   text-decoration: none;
 }
 
-footer .footer-links {
+footer .lff-footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
