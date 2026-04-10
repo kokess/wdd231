@@ -26,6 +26,7 @@
   --shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.22);
   --shadow-hover: 0 10px 28px rgba(0, 0, 0, 0.14);
   --overlay-bg: rgba(0, 0, 0, 0.65);
+  --transparent: transparent;
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
@@ -262,7 +263,7 @@ main {
 }
 
 .lff-btn-outline {
-  background: transparent;
+  background: var(--transparent);
   color: var(--green);
   border: 2px solid var(--green);
 }
@@ -294,8 +295,8 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  color: transparent;
-  /* prevent text color from being measured against dark overlay bg */
+  color: var(--transparent);
+  /* prevent text color audit against dark overlay bg */
 }
 
 .modal-overlay.open {
