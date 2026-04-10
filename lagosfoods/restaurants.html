@@ -63,10 +63,10 @@
 
     <!-- ── Controls ── -->
     <div class="controls" role="search" aria-label="Filter and search restaurants">
-      <label for="searchInput" class="sr-only">Search restaurants</label>
+      <label for="searchInput" class="lff-sr-only">Search restaurants</label>
       <input type="search" id="searchInput" placeholder="🔍 Search name, cuisine, or location…" autocomplete="off">
 
-      <label for="cuisineFilter" class="sr-only">Filter by cuisine</label>
+      <label for="cuisineFilter" class="lff-sr-only">Filter by cuisine</label>
       <select id="cuisineFilter" aria-label="Filter by cuisine">
         <option value="">All Cuisines</option>
         <option value="Nigerian">Nigerian</option>
@@ -79,7 +79,7 @@
         <option value="Pan-Asian">Pan-Asian</option>
       </select>
 
-      <label for="sortFilter" class="sr-only">Sort restaurants</label>
+      <label for="sortFilter" class="lff-sr-only">Sort restaurants</label>
       <select id="sortFilter" aria-label="Sort restaurants">
         <option value="rating">⭐ Highest Rated</option>
         <option value="name">🔤 A–Z</option>
@@ -103,13 +103,13 @@
   </main>
 
   <!-- ── Modal ── -->
-  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal">
-      <div class="modal-header">
+  <div class="lff-modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="lff-modal">
+      <div class="lff-modal-header">
         <h3 id="modalTitle">Restaurant Details</h3>
-        <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+        <button class="lff-modal-close" id="modalClose" aria-label="Close modal">✕</button>
       </div>
-      <div class="modal-body" id="modalBody"></div>
+      <div class="lff-modal-body" id="modalBody"></div>
     </div>
   </div>
 
