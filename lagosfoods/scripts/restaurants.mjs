@@ -62,9 +62,11 @@ function buildCard(r) {
   card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openModal(r); });
 
   // Fav toggle
-  card.querySelector('.fav-btn').addEventListener('click', e => {
+  const favBtn = card.querySelector('.lff-fav-btn');
+
+  favBtn.addEventListener('click', e => {
     e.stopPropagation();
-    toggleFav(r.id, card.querySelector('.fav-btn'));
+    toggleFav(r.id, favBtn);
   });
 
   return card;
