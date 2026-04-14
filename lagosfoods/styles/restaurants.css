@@ -120,9 +120,6 @@
 
 .restaurant-card-body {
   padding: 0.9rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .restaurant-card-body h3 {
@@ -150,10 +147,8 @@
 }
 
 .r-price {
-  font-size: 0.82rem;
-  font-weight: 700;
   color: var(--green);
-  margin-bottom: 0.6rem;
+  font-weight: bold;
 }
 
 .r-tags {
